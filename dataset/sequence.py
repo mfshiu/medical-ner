@@ -20,14 +20,34 @@ def _update_vocab(txt):
 
 
 def load_data(file_name='addition.txt', seed=1984):
-    x, t = load_data_without_test(file_name, seed)
+    que, ans = load_data_without_test(file_name, seed)
 
     # 10% for validation set
-    train_size = len(x) - int(min(1000, len(x) / 10))
-    (x_train, x_test) = x[:train_size], x[train_size:]
-    (t_train, t_test) = t[:train_size], t[train_size:]
+    train_size = len(que) - int(min(1000, len(que) / 10))
+    (que_train, que_test) = que[:train_size], que[train_size:]
+    (ans_train, ans_test) = ans[:train_size], ans[train_size:]
 
-    return (x_train, t_train), (x_test, t_test)
+    return (que_train, ans_train), (que_test, ans_test)
+
+
+def load_data2(file_name='addition.txt', seed=1934):
+    que, ans = load_data_without_test(file_name, seed)
+    ans_none = char_to_id["O"]
+
+    (que_train, que_test) = ([], [])
+    (ans_train, ans_test) = ([], [])
+    for i, q in enumerate(que):
+        a = ans[i]
+        if len(que_test) >= 1000:
+            que_train.append(q)
+            ans_train.append(a)
+        elif a[1] == ans_none and numpy.random.randint(0, 99) == 0:
+            que_test.append(q)
+            ans_test.append(a)
+        else:
+            que_train.append(q)
+            ans_train.append(a)
+    return (que_train, ans_train), (que_test, ans_test)
 
 
 def load_data_without_test(file_name, shuffle=True):

@@ -5,7 +5,7 @@ import numpy as np
 from dataset import sequence
 from attention_seq2seq import AttentionSeq2seq
 
-x_train, t_train = sequence.load_data_without_test('train_33839.txt', shuffle=False)
+x_train, t_train = sequence.load_data_without_test('train_180000.txt', shuffle=False)
 char_to_id, id_to_char = sequence.get_vocab()
 vocab_size = len(char_to_id)
 
@@ -21,7 +21,7 @@ hidden_size = 256 * 2
 batch_size = 128 * 2
 
 model = AttentionSeq2seq(vocab_size, wordvec_size, hidden_size)
-model.load_params("medical-16.pkl")
+model.load_params("medical-37.pkl")
 
 test_file = "../dataset/test-medical.txt"
 fillout_file = "../dataset/test-medicalout.txt"
