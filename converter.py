@@ -4,28 +4,10 @@ import numpy as np
 # import pandas as pd
 # from tqdm import tqdm
 from ckiptagger import construct_dictionary, WS
+from common import util
 
 
 NAME_ENTITY_MARK = "@N^E_M@"
-
-
-def construct_dictionary(word_to_weight):
-    length_word_weight = {}
-
-    for word, weight in word_to_weight.items():
-        if not word: continue
-        try:
-            weight = float(weight)
-        except ValueError:
-            continue
-        length = len(word)
-        if length not in length_word_weight:
-            length_word_weight[length] = {}
-        length_word_weight[length][word] = weight
-
-    length_word_weight = sorted(length_word_weight.items())
-
-    return length_word_weight
 
 
 def loadInputFile2(file_path):
@@ -68,7 +50,7 @@ if __name__ == '__main__':
 
     print("Segmenting...", end=' ')
     ws = WS("./ckipdata")
-    article_words = ws(articles, coerce_dictionary=construct_dictionary({
+    article_words = ws(articles, coerce_dictionary=util.construct_dictionary({
         NAME_ENTITY_MARK: 1,
     }))
     print("done.")

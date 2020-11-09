@@ -5,6 +5,25 @@ import os
 from common.np import *
 
 
+def construct_dictionary(word_to_weight):
+    length_word_weight = {}
+
+    for word, weight in word_to_weight.items():
+        if not word: continue
+        try:
+            weight = float(weight)
+        except ValueError:
+            continue
+        length = len(word)
+        if length not in length_word_weight:
+            length_word_weight[length] = {}
+        length_word_weight[length][word] = weight
+
+    length_word_weight = sorted(length_word_weight.items())
+
+    return length_word_weight
+
+
 def preprocess(text):
     text = text.lower()
     text = text.replace('.', ' .')
