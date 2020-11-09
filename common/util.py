@@ -49,7 +49,7 @@ def gen_coerec_dic():
         for m in range(60):
             word_to_weight["{}{}".format(m + 1, u)] = 1
         for m in num:
-            word_to_weight["{}{}".format(m + 1, u)] = 1
+            word_to_weight["{}{}".format(m, u)] = 1
 
     return construct_dictionary(word_to_weight)
 
