@@ -43,10 +43,13 @@ def gen_coerec_dic():
         for dn in day_name:
             word_to_weight["{}{}".format(d + 1, dn)] = 1
 
-    min_name = ['分', '分鐘']
-    for m in range(60):
-        for name in min_name:
-            word_to_weight["{}{}".format(m + 1, name)] = 1
+    units = ['分', '分鐘', '個', '次']
+    num = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "兩"]
+    for u in units:
+        for m in range(60):
+            word_to_weight["{}{}".format(m + 1, u)] = 1
+        for m in num:
+            word_to_weight["{}{}".format(m + 1, u)] = 1
 
     return construct_dictionary(word_to_weight)
 
