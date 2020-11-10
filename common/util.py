@@ -301,7 +301,8 @@ def eval_seq2seq(model, question, correct, id_to_char,
     correct = ''.join([id_to_char[int(c)] for c in correct])
     guess = ''.join([id_to_char[int(c)] for c in guess])
 
-    if verbos:
+    is_right = correct == guess
+    if verbos or not is_right:
         if is_reverse:
             question = question[::-1]
 
@@ -311,7 +312,7 @@ def eval_seq2seq(model, question, correct, id_to_char,
 
         is_windows = os.name == 'nt'
 
-        if correct == guess:
+        if is_right:
             mark = colors['ok'] + '☑' + colors['close']
             if is_windows:
                 mark = 'O'
