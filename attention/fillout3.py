@@ -11,7 +11,7 @@ from ckiptagger import construct_dictionary, WS
 from common import util
 
 if GPU:
-    os.environ["CUDA_VISIBLE_DEVICES"] = GPU_Device
+    os.environ["CUDA_VISIBLE_DEVICES"] = str(GPU_Device)
 
 x_train, t_train = sequence.load_data_without_test('train_300000.txt', shuffle=False)
 char_to_id, id_to_char = sequence.get_vocab()
