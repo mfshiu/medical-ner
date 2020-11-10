@@ -68007,3 +68007,1018 @@ Q: 兩千                           , T: money         , [91m☒[0m O
 [980] Q: 什麼                           , T: O             , [92m☑[0m O             
 
 val acc 99.700%
+2020-11-10 13:31:49.327854: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-11-10 13:31:49.327959: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.328337: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6575
+pciBusID: 0000:01:00.0
+2020-11-10 13:31:49.328371: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.328944: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 1 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.721
+pciBusID: 0000:02:00.0
+2020-11-10 13:31:49.328968: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-10 13:31:49.328986: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-10 13:31:49.329001: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-10 13:31:49.329015: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-10 13:31:49.329030: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-10 13:31:49.329043: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-10 13:31:49.329050: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-10 13:31:49.329076: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.329455: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.330081: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.330467: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.331045: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0, 1
+2020-11-10 13:31:49.331187: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-11-10 13:31:49.353640: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3199980000 Hz
+2020-11-10 13:31:49.353968: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x558f71627700 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-11-10 13:31:49.353988: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-11-10 13:31:49.355025: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.424468: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.425019: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x558f716ba0b0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-11-10 13:31:49.425034: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+2020-11-10 13:31:49.425039: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (1): GeForce GTX 1080 Ti, Compute Capability 6.1
+2020-11-10 13:31:49.425263: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.425607: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6575
+pciBusID: 0000:01:00.0
+2020-11-10 13:31:49.425637: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.425963: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 1 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.721
+pciBusID: 0000:02:00.0
+2020-11-10 13:31:49.425981: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-10 13:31:49.425989: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-10 13:31:49.425996: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-10 13:31:49.426002: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-10 13:31:49.426010: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-10 13:31:49.426016: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-10 13:31:49.426029: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-10 13:31:49.426054: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.426392: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.426744: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.427105: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.427441: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0, 1
+2020-11-10 13:31:49.427464: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-10 13:31:49.459221: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-10 13:31:49.459254: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 1 
+2020-11-10 13:31:49.459260: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N Y 
+2020-11-10 13:31:49.459264: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 1:   Y N 
+2020-11-10 13:31:49.459400: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.459777: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.460269: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.460614: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 9463 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2020-11-10 13:31:49.460997: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-11-10 13:31:49.461342: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10467 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2020-11-10 13:31:50.489872: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+Use GPU: 0
+[92m------------------------------------------------------------[0m
+                       [92mGPU Mode (cupy)[0m
+[92m------------------------------------------------------------[0m
+
+Read all articles... done.
+Segment articles... done.
+Recognize name entities...
+Recognize article 0, 醫師：這個要電腦看才有辦法，這是嚴重或一般的。民眾：這是沒關係啦。醫師：沒關係齁。民眾：他一定要有說 ...
+[186] 0	256	258	25	med_exam      
+[237] 0	320	322	25	med_exam      
+[301] 0	409	411	4點	time          
+[858] 0	1168	1172	7月21	time          
+[1143] 0	1571	1574	10多	time          
+[1307] 0	1809	1812	10多	time          
+[1609] 0	2214	2217	15天	time          
+[1680] 0	2319	2322	禮拜一	time          
+[1689] 0	2332	2335	禮拜一	time          
+[1856] 0	2555	2558	皇后區	location      
+[1992] 0	2752	2755	皇后區	location      
+[1997] 0	2760	2763	皇后區	location      
+[2001] 0	2767	2770	皇后區	location      
+[2005] 0	2774	2777	皇后區	location      
+[2008] 0	2780	2782	北區	location      
+[2197] 0	3029	3031	昨天	time          
+Recognize article 1, 醫師：就照舊這樣子。阿這一定要跟你講一下。家屬：沒關係啊。醫師：阿最近好嗎？民眾：都正常。醫師：都正 ...
+[334] 1	457	459	五月	time          
+Recognize article 2, 醫師：就照這樣，我們就照這樣問診這樣而已啦，阿最近我們8月17號有抽血。家屬：對上上個禮拜。醫師：阿 ...
+[18] 2	27	32	8月17號	time          
+[33] 2	53	56	110	med_exam      
+[54] 2	85	88	110	med_exam      
+[365] 2	496	498	泰國	location      
+[415] 2	563	566	光華路	location      
+[420] 2	571	574	光華路	location      
+Recognize article 3, 醫師：最近有怎麼樣嗎？民眾：都一樣欸。醫師：會痛還是怎麼樣嗎？民眾：都一樣。醫師：有發燒或是怕冷嗎？ ...
+[165] 3	233	235	9點	time          
+[176] 3	250	255	6月15號	time          
+[187] 3	272	274	14	time          
+[189] 3	275	277	15	med_exam      
+[401] 3	576	580	6月4號	time          
+[404] 3	582	584	前年	time          
+[412] 3	592	594	前年	time          
+[666] 3	913	917	50分鐘	time          
+[1045] 3	1430	1433	洗禮拜	time          
+[1378] 3	1875	1877	5月	time          
+[1383] 3	1882	1884	去年	time          
+[1387] 3	1890	1894	108年	time          
+[1392] 3	1899	1903	106年	time          
+[1398] 3	1910	1914	106年	time          
+[1407] 3	1923	1925	5月	time          
+[1411] 3	1929	1931	四月	time          
+[1413] 3	1932	1934	五月	time          
+[1485] 3	2023	2025	5月	time          
+[1492] 3	2033	2036	8月份	time          
+[1497] 3	2041	2043	8月	time          
+[1501] 3	2046	2048	8月	time          
+[1598] 3	2178	2183	八月23日	time          
+[1608] 3	2195	2200	八月23日	time          
+[1612] 3	2204	2207	八月份	time          
+[1624] 3	2221	2222	7	med_exam      
+[1626] 3	2223	2225	8月	time          
+[1631] 3	2230	2233	八月份	time          
+[1645] 3	2250	2254	106年	time          
+[2278] 3	3131	3133	明天	time          
+Recognize article 4, 民眾：前一次是6月14號。醫師：嗯，14。民眾：13還是14。醫師：我看一下14啊，13和14，其實 ...
+[6] 4	7	12	6月14號	time          
+[12] 4	18	20	14	time          
+[16] 4	24	26	13	med_exam      
+[18] 4	28	30	14	time          
+[25] 4	38	40	14	time          
+[28] 4	42	44	13	med_exam      
+[30] 4	45	47	14	time          
+[110] 4	146	148	昨天	time          
+[236] 4	318	321	巫醫師	name          
+[476] 4	623	625	昨天	time          
+[510] 4	666	668	昨天	time          
+[523] 4	684	690	60多70多	med_exam      
+[639] 4	838	840	昨天	time          
+[669] 4	872	877	6月24號	time          
+[1319] 4	1704	1706	昨天	time          
+[1332] 4	1720	1723	巫醫師	name          
+[1481] 4	1912	1915	巫醫師	name          
+Recognize article 5, 醫師：我們這邊是感染科門診這樣子，你那時候是絞痛一開始是這邊啦齁。民眾：是是本來是以為是這個可是他這 ...
+[56] 5	85	87	早上	time          
+[256] 5	360	363	1：三	time          
+[610] 5	861	864	1．6	med_exam      
+[745] 5	1047	1049	昨天	time          
+[1344] 5	1886	1889	禮拜三	time          
+[1348] 5	1893	1896	禮拜三	time          
+[1365] 5	1919	1921	上午	time          
+[1367] 5	1922	1925	禮拜三	time          
+[1369] 5	1927	1929	上午	time          
+[1748] 5	2433	2437	禮拜三，	time          
+[1749] 5	2437	2441	6月6號	time          
+[1960] 5	2725	2726	7	med_exam      
+[1963] 5	2728	2729	7	med_exam      
+Recognize article 6, 民眾：我是急性積水跟⋯⋯醫師：積水喔？民眾：還有心臟積水上個禮拜才來抽。家屬：他那個算沒有很好。醫師 ...
+[63] 6	86	88	前年	time          
+[115] 6	158	160	今年	time          
+[116] 6	160	162	5月	time          
+[268] 6	376	380	7月4號	time          
+[732] 6	989	991	昨天	time          
+[736] 6	994	997	418	med_exam      
+[742] 6	1003	1006	418	med_exam      
+[769] 6	1041	1044	418	med_exam      
+[868] 6	1170	1173	343	med_exam      
+[872] 6	1177	1180	343	med_exam      
+[925] 6	1250	1251	吳	name          
+[1082] 6	1454	1456	早上	time          
+[1206] 6	1625	1627	櫻木	name          
+Recognize article 7, 醫師：啊最近會喘的症狀有好一些嗎？民眾：有改善大概可能一半了。醫師：有改善一半阿齁？民眾：對，可能慢 ...
+[172] 7	240	243	132	med_exam      
+[176] 7	247	250	132	med_exam      
+[192] 7	272	274	91	med_exam      
+[196] 7	278	280	91	med_exam      
+[228] 7	323	325	72	time          
+[283] 7	399	402	阿醫師	name          
+[526] 7	717	720	三百多	med_exam      
+Recognize article 8, 醫師：那我們還是有，就幫我一下這樣好不好？民眾：好很多了啦，剩下腳這裡，這裡才這到腳這裡。醫師：這個 ...
+[717] 8	932	935	王阿明	name          
+Recognize article 9, 醫師：那我們就照，我們的流程這樣就好了。民眾：ＯＫ。醫師：那其他，我們五月的時候抽血，下次來就大概要 ...
+[24] 9	35	37	五月	time          
+[226] 9	314	316	9月	time          
+[304] 9	417	419	73	med_exam      
+[319] 9	439	442	170	med_exam      
+[323] 9	446	449	170	med_exam      
+Recognize article 10, 醫師：呃，沒有拉肚子這些症狀？民眾：沒有。醫師：沒有發燒？民眾：沒有。醫師：越來越瘦了欸。民眾：不知 ...
+[47] 10	71	73	74	med_exam      
+[52] 10	78	80	74	med_exam      
+[133] 10	182	185	禮拜三	time          
+[359] 10	491	494	禮拜三	time          
+[367] 10	502	505	平常日	time          
+[393] 10	537	541	十月六號	time          
+Recognize article 11, 醫師：120、71，我先登錄一下，18.5好像最近才上禮拜才剛看過那個腸胃科齁？家屬：對，嘿。醫師： ...
+[4] 11	7	9	71	med_exam      
+[11] 11	17	21	18.5	med_exam      
+[85] 11	123	125	北榮	location      
+[107] 11	154	156	紐約	location      
+[121] 11	174	176	紐約	location      
+[191] 11	271	275	阿美達錠	name          
+[196] 11	280	284	阿美達錠	name          
+[255] 11	362	364	北榮	location      
+[259] 11	368	371	巫醫師	name          
+[265] 11	376	377	王	name          
+[277] 11	392	394	大哥	family        
+[295] 11	417	419	北榮	location      
+[347] 11	484	486	昨天	time          
+[450] 11	627	630	巫醫師	name          
+[485] 11	676	678	紐約	location      
+[507] 11	709	712	巫醫師	name          
+[800] 11	1097	1099	6月	time          
+[869] 11	1184	1186	前天	time          
+[878] 11	1196	1198	前天	time          
+[994] 11	1353	1355	紐約	location      
+[998] 11	1358	1360	紐約	location      
+[1083] 11	1470	1472	紐約	location      
+[1207] 11	1636	1638	後年	time          
+[1219] 11	1653	1655	後年	time          
+[1225] 11	1662	1664	後年	time          
+[1315] 11	1784	1786	北榮	location      
+[1332] 11	1806	1808	北榮	location      
+[1390] 11	1888	1890	去年	time          
+[1481] 11	2014	2016	今年	time          
+[1580] 11	2148	2154	10月17號	time          
+[1639] 11	2235	2239	流川鋒流	name          
+Recognize article 12, 家屬：他就把那個腳還有手從上面延伸。醫師：哦～家屬：類似電腦那樣子。醫師：電腦喔？家屬：照出來大概就 ...
+[153] 12	217	219	4點	time          
+[239] 12	342	345	129	med_exam      
+[243] 12	349	352	129	med_exam      
+[245] 12	353	355	81	med_exam      
+[250] 12	360	363	129	med_exam      
+[252] 12	364	366	81	med_exam      
+[284] 12	407	412	7月26號	time          
+[302] 12	434	436	92	time          
+[609] 12	855	857	85	med_exam      
+[630] 12	885	887	85	med_exam      
+Recognize article 13, 民眾：沒關係啦，看你怎麼看都可以。醫師：沒有啦要先經過你同意啦。民眾：啊抽血結果怎麼樣？醫師：嗯9月 ...
+[33] 13	48	52	9月2號	time          
+[38] 13	60	63	9．7	med_exam      
+[57] 13	87	89	56	med_exam      
+[84] 13	126	128	56	med_exam      
+[106] 13	158	161	9．6	med_exam      
+[111] 13	166	169	9．8	med_exam      
+[127] 13	188	191	9．6	med_exam      
+[312] 13	446	448	早上	time          
+[325] 13	463	465	3月	time          
+[339] 13	481	482	7	med_exam      
+[345] 13	488	491	10月	time          
+[347] 13	492	495	10月	time          
+[753] 13	1060	1064	隱形眼鏡	profession    
+[811] 13	1136	1140	隱形眼鏡	profession    
+Recognize article 14, 民眾：嘿，應該沒什麼事。醫師：應該沒什麼事，阿CD4是753。民眾：那是細……醫師：病毒量37。民眾 ...
+[19] 14	27	30	753	med_exam      
+[31] 14	45	47	37	med_exam      
+[176] 14	242	246	38.7	med_exam      
+[180] 14	250	253	387	med_exam      
+[261] 14	371	374	68點	med_exam      
+[266] 14	379	380	7	med_exam      
+[270] 14	384	388	68.7	med_exam      
+[474] 14	655	657	8月	time          
+[479] 14	662	664	4月	time          
+[486] 14	671	673	4月	time          
+[507] 14	701	703	8月	time          
+[787] 14	1094	1096	今年	time          
+[844] 14	1168	1172	22，诶	med_exam      
+[846] 14	1173	1177	5月21	time          
+[849] 14	1179	1184	5月21號	time          
+[997] 14	1385	1390	9月20號	time          
+[1002] 14	1396	1398	9月	time          
+[1005] 14	1400	1404	9月20	time          
+Recognize article 15, 醫師：阿最近還好嗎？民眾：又感冒阿。醫師：又感冒了？民眾：上回感冒好了，阿然後又感冒阿。醫師：喔～民 ...
+[63] 15	92	95	2.4	med_exam      
+[67] 15	99	102	2.4	med_exam      
+[125] 15	182	185	2.4	med_exam      
+[448] 15	632	634	前鎮	location      
+[888] 15	1228	1231	五十幾	time          
+[1055] 15	1452	1456	0.55	med_exam      
+Recognize article 16, 醫師：最近還好嗎？民眾：最近還好。醫師：最近還好。民眾：嘿。醫師：阿肚子痛有效嗎？民眾：有好啊。醫師 ...
+[238] 16	324	328	5.02	med_exam      
+[246] 16	337	341	7.64	med_exam      
+[257] 16	353	357	0.62	med_exam      
+[266] 16	367	368	7	med_exam      
+[277] 16	383	386	8.5	med_exam      
+[287] 16	397	406	7.83，7.02	med_exam      
+Recognize article 17, 醫師：回去都沒有再發燒？民眾：沒有。醫師：你真的很奇怪欸。民眾：超奇怪的。醫師：超奇怪的，我本來想齁 ...
+[1123] 17	1567	1569	明天	time          
+[1132] 17	1578	1580	明天	time          
+[1136] 17	1584	1587	明後天	time          
+[1141] 17	1593	1595	明天	time          
+[1143] 17	1596	1599	禮拜一	time          
+[1148] 17	1604	1606	明天	time          
+[1164] 17	1630	1633	禮拜一	time          
+[1168] 17	1637	1640	禮拜一	time          
+[1179] 17	1656	1659	禮拜二	time          
+[1183] 17	1663	1666	禮拜二	time          
+[1195] 17	1678	1682	押禮拜二	time          
+[1204] 17	1692	1694	小花	name          
+[1446] 17	2026	2028	跨月	time          
+[1451] 17	2034	2036	五月	time          
+[1454] 17	2038	2041	五月份	time          
+[1469] 17	2062	2065	六月份	time          
+[1542] 17	2167	2169	台中	location      
+[1555] 17	2185	2187	台中	location      
+[1664] 17	2344	2346	五月	time          
+Recognize article 18, 醫師：我們最近應該還好對不對？民眾：對啊，五月中有來抽血。醫師：看起來數據⋯⋯電解質OK，肝功能、腎 ...
+[15] 18	21	23	五月	time          
+[169] 18	237	240	921	time          
+[189] 18	265	268	500	money         
+Recognize article 19, 民眾：但是，我這隻腳反而也是會常無力。醫師：會常無力。民眾：而且有時候會撞頭。醫師：喔撞頭。民眾：撞 ...
+[593] 19	821	823	叔叔	family        
+[602] 19	832	834	叔叔	family        
+[676] 19	939	943	0.1一	time          
+[679] 19	945	948	0.2	med_exam      
+[693] 19	967	970	0.8	med_exam      
+[695] 19	971	974	0.7	med_exam      
+[2175] 19	3013	3015	陽明	location      
+[2226] 19	3082	3084	陽明	location      
+[2233] 19	3093	3095	陽明	location      
+[2765] 19	3837	3839	陽明	location      
+[2788] 19	3869	3871	陽明	location      
+[2896] 19	4017	4019	長榮	location      
+[2960] 19	4101	4103	十四	time          
+[2990] 19	4142	4144	六十	time          
+[3608] 19	5007	5009	昨天	time          
+[3815] 19	5298	5300	叔叔	family        
+[4203] 19	5840	5842	西醫	name          
+[4326] 19	6007	6009	西醫	name          
+Recognize article 20, 個管師：OKOK現在這個月還好嗎？民眾：還好啊。個管師：有性行為嗎？民眾：有。個管師：還是都是約？有 ...
+[69] 20	106	108	IG	name          
+[76] 20	117	119	IG	name          
+[543] 20	767	769	花蓮	location      
+[3256] 20	4646	4650	8月2號	time          
+[3262] 20	4659	4664	8月20號	time          
+Recognize article 21, 個管師：你有沒有什麼問題要問我？民眾：問題喔？個管師：對。民眾：你會教我怎麼訂藥就對了？個管師：對。 ...
+[1349] 21	1935	1937	高中	location      
+[1805] 21	2553	2555	彰化	location      
+[1925] 21	2714	2716	泰國	location      
+[1931] 21	2723	2725	泰國	location      
+[2360] 21	3323	3325	泰國	location      
+Recognize article 22, 個管師：剛剛王醫師有跟你解釋了怎麼吃PrEP對不對？民眾：嗯嗯。個管師：那你剛剛出去之後你回去有沒有 ...
+[3] 22	6	7	王	name          
+[75] 22	112	113	王	name          
+[374] 22	523	525	陽明	location      
+[384] 22	538	540	陽明	location      
+[535] 22	743	745	陽明	location      
+[1909] 22	2736	2737	王	name          
+[2288] 22	3258	3260	十二	time          
+[2308] 22	3287	3289	十二	time          
+[2366] 22	3361	3364	三六九	med_exam      
+[2369] 22	3366	3369	三六九	med_exam      
+[2451] 22	3484	3487	一萬多	money         
+[2532] 22	3604	3605	王	name          
+[2537] 22	3612	3615	禮拜一	time          
+[2539] 22	3616	3618	早上	time          
+[2541] 22	3619	3622	禮拜三	time          
+[2543] 22	3623	3625	下午	time          
+[2552] 22	3637	3640	禮拜一	time          
+[2554] 22	3641	3644	禮拜三	time          
+[2592] 22	3702	3703	王	name          
+Recognize article 23, 個管師：剛剛王醫師跟你說的部分，你有沒有什麼疑問想問我，或你想一下？民眾：大致上問題就這樣，就是考慮 ...
+[3] 23	6	7	王	name          
+[38] 23	57	58	王	name          
+[389] 23	576	577	王	name          
+[428] 23	636	637	王	name          
+[685] 23	1004	1007	禮拜一	time          
+[695] 23	1020	1023	禮拜一	time          
+[1205] 23	1756	1757	王	name          
+Recognize article 24, 民眾：平常都在睡啦。個管師：然後所以現在是你的睡覺時間？民眾：對，我現在應該人在床上睡覺。個管師：O ...
+[512] 24	716	718	台中	location      
+Recognize article 25, 個管師：好喔，這個月如何呢？民眾：還不錯啊。個管師：那藥怎麼吃？民眾：每天吃，一樣每天吃。個管師：啊 ...
+[130] 25	193	196	28天	time          
+Recognize article 26, 個管師：欸我們上一次碰面是……5月。民眾：對。個管師：喔很久了餒。民眾：對阿。個管師：所以這段時間還 ...
+[11] 26	15	17	5月	time          
+[180] 26	234	236	周末	time          
+[185] 26	243	245	平日	time          
+[829] 26	1166	1172	tinder	contact       
+[1510] 26	2161	2165	LINE	contact       
+[1523] 26	2184	2187	5.6	med_exam      
+[1550] 26	2223	2227	LINE	contact       
+Recognize article 27, 個管師：啊你為什麼會去台中啊？民眾：我去上課啊。個管師：你去上課？民眾：對啊。個管師：上什麼課？喔， ...
+[7] 27	11	13	台中	location      
+[72] 27	97	99	台中	location      
+[82] 27	112	114	台中	location      
+[190] 27	263	265	台中	location      
+[275] 27	375	377	十三	time          
+[282] 27	386	388	十三	time          
+[288] 27	394	396	十三	time          
+[291] 27	398	400	十三	time          
+[332] 27	447	449	十三	time          
+[335] 27	451	453	十三	time          
+[340] 27	459	461	十三	time          
+[383] 27	517	519	十三	time          
+[396] 27	537	539	十三	time          
+Recognize article 28, 個管師：诶？你上次買這個藥，買多久了？民眾：就是……個管師：一年？民眾：差……差不多是中秋的時候買的 ...
+[831] 28	1158	1160	昨天	time          
+[833] 28	1161	1163	前天	time          
+[1689] 28	2403	2405	早上	time          
+Recognize article 29, 民眾：好像有參加計畫，然後……個管師：欸？在這裡嗎？民眾：不是，在桃園。個管師：在桃園。民眾：嘿，然 ...
+[24] 29	33	35	桃園	location      
+[29] 29	41	43	桃園	location      
+[962] 29	1365	1368	552	med_exam      
+[969] 29	1376	1382	16000多	med_exam      
+[973] 29	1386	1391	17000	money         
+[1250] 29	1758	1760	北區	location      
+[1303] 29	1838	1841	369	med_exam      
+[1384] 29	1939	1941	7月	time          
+[1386] 29	1942	1944	8月	time          
+[1388] 29	1945	1947	9月	time          
+[1447] 29	2026	2030	7月6號	time          
+[1466] 29	2054	2056	8月	time          
+[1538] 29	2153	2155	9月	time          
+Recognize article 30, 醫師：阿最近還好嗎？民眾：都ＯＫ。醫師：好～你另一半還好嗎？先不要跟我說分手了。民眾：沒有啦。醫師： ...
+[182] 30	250	252	嘉義	location      
+[325] 30	449	452	禮拜二	time          
+[341] 30	469	472	禮拜日	time          
+[355] 30	488	492	3456	med_exam      
+[370] 30	510	513	禮拜日	time          
+[380] 30	525	528	禮拜日	time          
+[922] 30	1260	1262	美國	location      
+Recognize article 31, 醫師：最近吃藥的情況怎麼樣？民眾：欸就一樣啊，沒有特別……醫師：所以還會頭暈阿或什麼？民眾：頭暈？不 ...
+[733] 31	1018	1020	IG	name          
+[739] 31	1028	1030	IG	name          
+[763] 31	1061	1063	IG	name          
+[1317] 31	1862	1864	9月	time          
+[1327] 31	1874	1877	12月	time          
+[1339] 31	1890	1893	12月	time          
+[1364] 31	1924	1928	8月3號	time          
+Recognize article 32, 醫師：我們先看上次的抽血啦齁。民眾：好。醫師：抽血看起來沒事，我們抽愛滋梅毒B肝，你都沒有，那肝腎功 ...
+[425] 32	594	596	明天	time          
+[870] 32	1208	1210	小美	name          
+[1132] 32	1542	1544	泰國	location      
+[1425] 32	1950	1953	五百多	med_exam      
+[1437] 32	1967	1969	嘉義	location      
+Recognize article 33, 醫師：你就那個、那個PrEP的那個、這個……對，你就、你就在我門診時間啦！所以就比方說是禮拜二的早上 ...
+[35] 33	44	47	禮拜二	time          
+[37] 33	48	50	早上	time          
+[39] 33	51	54	禮拜五	time          
+[41] 33	55	57	下午	time          
+[647] 33	880	885	10月7號	time          
+[672] 33	917	919	早上	time          
+[675] 33	921	923	下午	time          
+Recognize article 34, 醫師：好所以，嗯……你怎麼知道我們的？怎麼知道有這個東西？民眾：喔那個……我我我的伴侶跟我說的。醫師 ...
+[71] 34	88	90	萬華	location      
+[78] 34	98	100	萬華	location      
+[1131] 34	1536	1538	昨天	time          
+[1782] 34	2476	2478	40	med_exam      
+[1784] 34	2479	2481	50	med_exam      
+[2020] 34	2804	2809	1800多	med_exam      
+[2056] 34	2859	2863	800多	money         
+[2095] 34	2916	2920	400多	money         
+[2981] 34	4156	4159	九十幾	med_exam      
+[3044] 34	4248	4251	禮拜二	time          
+[3065] 34	4279	4281	下午	time          
+[3075] 34	4292	4295	禮拜三	time          
+[3077] 34	4296	4298	下午	time          
+[3079] 34	4299	4302	禮拜五	time          
+[3081] 34	4303	4305	早上	time          
+[3153] 34	4414	4417	禮拜三	time          
+[3155] 34	4418	4420	下午	time          
+[3157] 34	4421	4424	禮拜五	time          
+[3159] 34	4425	4427	早上	time          
+[3165] 34	4433	4436	禮拜五	time          
+[3167] 34	4437	4439	早上	time          
+[3177] 34	4451	4454	禮拜五	time          
+[3182] 34	4459	4462	禮拜五	time          
+[3197] 34	4483	4486	禮拜五	time          
+[3205] 34	4495	4498	禮拜五	time          
+[3207] 34	4499	4501	早上	time          
+[3209] 34	4502	4507	7月21號	time          
+[3258] 34	4572	4574	萬華	location      
+[3263] 34	4579	4581	萬華	location      
+[3265] 34	4582	4584	萬華	location      
+[3273] 34	4593	4595	萬華	location      
+Recognize article 35, 醫師：目前，所以你是怎麼會知道這個事情？身邊有人在吃嗎還是？民眾：沒有，就網路上有看到相關字阿，然後 ...
+[173] 35	248	250	群組	profession    
+[177] 35	253	255	群組	profession    
+[1453] 35	2109	2112	一兩點	time          
+[1469] 35	2132	2135	禮拜一	time          
+[1471] 35	2137	2139	早上	time          
+[1474] 35	2142	2145	一兩點	time          
+[2352] 35	3428	3430	40	med_exam      
+[2358] 35	3438	3440	40	med_exam      
+[2456] 35	3583	3585	40	med_exam      
+[2482] 35	3624	3626	50	med_exam      
+[2711] 35	3955	3957	72	time          
+[2728] 35	3979	3982	28天	time          
+[2831] 35	4128	4133	2010年	time          
+[2883] 35	4201	4205	1600	money         
+[2901] 35	4228	4233	12000	money         
+[2934] 35	4279	4281	泰國	location      
+[2958] 35	4309	4312	一萬二	med_exam      
+[2960] 35	4313	4316	一萬三	med_exam      
+[3050] 35	4446	4448	泰國	location      
+[3164] 35	4621	4623	美國	location      
+[3237] 35	4741	4743	泰國	location      
+[3265] 35	4780	4783	500	money         
+[3268] 35	4785	4788	600	money         
+[3285] 35	4810	4812	泰國	location      
+[3301] 35	4836	4840	1500	money         
+[3313] 35	4854	4857	500	money         
+[3316] 35	4859	4862	600	money         
+[3377] 35	4952	4954	搜尋	name          
+Recognize article 36, 醫師：你多早來啊？民眾：痾。醫師：六點半。民眾：差不多，六點半就到了。醫師：OK，那你七點四十二去抽 ...
+[50] 36	71	73	後天	time          
+[52] 36	74	76	下午	time          
+[55] 36	78	82	Line	contact       
+[219] 36	291	293	明天	time          
+[221] 36	294	298	line	contact       
+[494] 36	660	665	四月二十五	time          
+[506] 36	678	683	四月二十五	time          
+[532] 36	715	720	四月二十五	time          
+Recognize article 37, 醫師：阿這個月還好嗎？民眾：還好。醫師：有沒有漏吃幾天啊？民眾：沒有餒。醫師：天天都有吃？民眾：但我 ...
+[64] 37	87	89	傍晚	time          
+[68] 37	93	95	傍晚	time          
+[154] 37	222	224	早上	time          
+[159] 37	229	231	早上	time          
+[694] 37	981	985	400多	money         
+[732] 37	1040	1043	一萬三	med_exam      
+[753] 37	1069	1072	4千多	money         
+[789] 37	1122	1124	泰國	location      
+[861] 37	1238	1240	美國	location      
+[920] 37	1326	1330	1500	money         
+[957] 37	1383	1385	泰國	location      
+Recognize article 38, 醫師：啊最近還好嗎？民眾：OK啊。醫師：還可以？民眾：嗯。醫師：所以，你現在是吃任務型？民眾：對啊。 ...
+[48] 38	70	72	高雄	location      
+[58] 38	84	86	高雄	location      
+[63] 38	92	94	高雄	location      
+[98] 38	141	143	八號	time          
+[126] 38	177	179	高雄	location      
+[406] 38	582	584	高雄	location      
+Recognize article 39, 醫師：好，所以你藥吃完了？民眾：對，欸剩最後一個月。醫師：最，剩最後一個月？民眾：嗯。醫師：你現在吃 ...
+[253] 39	333	334	波	location      
+Recognize article 40, 醫師：阿現在是在哪，在，也是在念碩班？民眾：對阿。醫師：要畢業了嗎？民眾：希望是快了。醫師：希望快了 ...
+[44] 40	58	61	電機系	time          
+[248] 40	344	347	呼吸道	profession    
+[272] 40	377	379	十月	time          
+[353] 40	488	491	替代役	profession    
+[390] 40	539	541	區塊	location      
+[396] 40	548	550	區塊	location      
+Recognize article 41, 醫師：那回去血糖那些都還OK齁？民眾：OK的樣子吧我沒量阿。醫師：阿你有自己……民眾：我沒量阿，我是 ...
+[570] 41	766	769	15天	time          
+[590] 41	794	797	15天	time          
+[600] 41	809	812	15天	time          
+[755] 41	1019	1022	勝利路	location      
+[760] 41	1027	1030	勝利路	location      
+[770] 41	1041	1043	勝利	location      
+[821] 41	1115	1118	張小男	name          
+Recognize article 42, 民眾：我看可以再吃一下。醫師：再吃一下？妳這個越來越不紅了餒，齁？民眾：對，好像吃這個藥有慢慢慢慢退 ...
+[223] 42	294	297	阿醫師	name          
+[510] 42	679	682	黃明明	name          
+[515] 42	688	691	黃明明	name          
+[854] 42	1136	1138	德國	location      
+[1529] 42	2021	2024	119	med_exam      
+[1809] 42	2391	2394	119	med_exam      
+[2063] 42	2726	2729	119	med_exam      
+Recognize article 43, 醫師：仙道吃藥沒有問題啦齁？民眾：沒有問題但是就是，拉肚子還是一樣，我不想得是不是我喝牛奶關係？有參 ...
+[167] 43	229	231	明天	time          
+[190] 43	264	269	7月12號	time          
+[327] 43	449	451	56	med_exam      
+[350] 43	483	488	7月12號	time          
+[401] 43	560	562	早上	time          
+[404] 43	565	567	中午	time          
+[509] 43	702	704	下午	time          
+[518] 43	715	717	早上	time          
+[551] 43	762	765	禮拜五	time          
+[553] 43	766	768	早上	time          
+[568] 43	787	790	禮拜五	time          
+[570] 43	791	793	早上	time          
+[598] 43	828	832	810，	med_exam      
+[599] 43	832	837	8月10號	time          
+[682] 43	939	941	早上	time          
+[716] 43	983	985	早上	time          
+[756] 43	1037	1040	14天	time          
+[759] 43	1043	1045	28	med_exam      
+[775] 43	1065	1067	14	time          
+[806] 43	1109	1111	早上	time          
+[958] 43	1318	1320	按月	time          
+Recognize article 44, 醫師：啊這個禮拜感覺怎麼樣？民眾：這個禮拜還是嗅覺反反覆覆。醫師：嗅覺反反覆覆。民眾：有比較好，就是 ...
+[1114] 44	1564	1566	小牛	profession    
+[1183] 44	1662	1664	日本	location      
+[1230] 44	1731	1732	波	location      
+Recognize article 45, 醫師：這是今天照的X光，看起來沒有纖維化，滿穩定的，恢復得還不錯，這是今天，OK。民眾：跟一般人有差 ...
+[66] 45	93	97	7月12	time          
+[362] 45	507	510	28天	time          
+[413] 45	574	576	8月	time          
+[420] 45	585	588	11月	time          
+[442] 45	616	620	8月18	time          
+[448] 45	627	629	9月	time          
+[454] 45	634	636	8月	time          
+[458] 45	640	642	9月	time          
+[508] 45	704	710	11月30號	time          
+[650] 45	920	926	11月30號	time          
+[820] 45	1162	1166	1555	med_exam      
+Recognize article 46, 醫師：你的狀況怎麼樣呢？民眾：我覺得我在家休息的狀況是比較穩定了。醫師：比較穩定。民眾：對，我有試過 ...
+[110] 46	146	148	一早	time          
+[175] 46	233	237	7月21	time          
+[177] 46	238	242	7月23	time          
+[182] 46	246	250	7月21	time          
+[184] 46	251	255	7月23	time          
+[188] 46	259	262	一二三	med_exam      
+[193] 46	267	270	一二三	med_exam      
+[199] 46	276	279	禮拜三	time          
+[208] 46	288	291	禮拜四	time          
+[215] 46	298	301	禮拜一	time          
+[245] 46	341	346	7月23號	time          
+[288] 46	405	409	37.5	med_exam      
+[301] 46	423	425	傍晚	time          
+[316] 46	444	446	早上	time          
+[322] 46	452	454	早上	time          
+[325] 46	456	459	36幾	med_exam      
+[333] 46	469	471	下午	time          
+[344] 46	485	489	37.2	med_exam      
+[350] 46	496	498	37	med_exam      
+[369] 46	521	523	下午	time          
+[417] 46	589	591	早上	time          
+[428] 46	604	606	早上	time          
+[435] 46	613	615	下午	time          
+[470] 46	663	665	早上	time          
+[498] 46	704	706	早上	time          
+[500] 46	707	711	36.5	med_exam      
+[512] 46	726	728	下午	time          
+[518] 46	734	736	37	med_exam      
+[526] 46	749	751	37	med_exam      
+[617] 46	877	879	37	med_exam      
+[696] 46	986	989	188	med_exam      
+[699] 46	993	995	75	med_exam      
+[713] 46	1011	1013	50	med_exam      
+[728] 46	1032	1035	188	med_exam      
+[730] 46	1037	1039	75	med_exam      
+[741] 46	1054	1056	13	med_exam      
+[918] 46	1313	1316	七八十	med_exam      
+[944] 46	1349	1352	189	med_exam      
+[948] 46	1356	1359	201	med_exam      
+[992] 46	1424	1428	4.1%	med_exam      
+[1013] 46	1456	1458	13	med_exam      
+[1015] 46	1460	1464	4.1%	med_exam      
+[1186] 46	1691	1693	22	time          
+[1219] 46	1734	1736	早上	time          
+[1228] 46	1746	1748	早上	time          
+[1229] 46	1748	1752	36.2	med_exam      
+[1245] 46	1771	1775	36.2	med_exam      
+[1251] 46	1783	1787	36.8	med_exam      
+[1269] 46	1810	1814	37.5	med_exam      
+[1281] 46	1827	1831	37.5	med_exam      
+[1317] 46	1881	1885	37.5	med_exam      
+[1345] 46	1925	1927	38	med_exam      
+[1479] 46	2117	2119	美國	location      
+[2116] 46	3002	3005	134	med_exam      
+[2120] 46	3009	3012	134	med_exam      
+[2203] 46	3122	3125	136	med_exam      
+[2694] 46	3802	3804	28	med_exam      
+[2704] 46	3815	3818	28天	time          
+[2706] 46	3819	3822	28天	time          
+[3099] 46	4366	4368	四週	time          
+Recognize article 47, 民眾：切片那個傷口齁……醫師：是。民眾：好像一直沒有癒合。醫師：沒有癒合喔？民眾：滲出血水。醫師：真 ...
+[133] 47	189	192	15天	time          
+[507] 47	713	718	AST33	med_exam      
+[523] 47	741	744	515	med_exam      
+[525] 47	745	748	433	med_exam      
+[527] 47	749	752	124	med_exam      
+[574] 47	818	821	4.3	med_exam      
+[587] 47	841	845	7500	money         
+[594] 47	854	858	53萬9	med_exam      
+[601] 47	865	868	5萬2	money         
+[637] 47	915	917	5天	time          
+[838] 47	1207	1210	柏油路	profession    
+[1604] 47	2271	2274	789	med_exam      
+Recognize article 48, 醫師：啊病例5889小……小明那我們就開始喔齁。民眾：OK。醫師：好齁。阿我們抽血的檢查……痾……恩 ...
+[4] 48	6	10	5889	med_exam      
+[8] 48	13	15	小明	name          
+[235] 48	331	338	189，189	med_exam      
+[249] 48	360	363	189	med_exam      
+[279] 48	401	404	166	med_exam      
+[283] 48	407	410	189	med_exam      
+[293] 48	421	424	166	med_exam      
+[297] 48	428	431	166	med_exam      
+[318] 48	455	458	200	money         
+[323] 48	463	466	225	med_exam      
+[329] 48	473	476	200	money         
+[396] 48	562	564	47	med_exam      
+[400] 48	568	570	22	time          
+[609] 48	839	841	65	med_exam      
+[615] 48	847	849	小明	name          
+[1035] 48	1410	1415	25000	money         
+[1044] 48	1428	1433	25000	money         
+[1048] 48	1437	1442	30000	money         
+[1053] 48	1448	1453	30000	money         
+[1076] 48	1486	1494	25000，25	med_exam      
+[1101] 48	1528	1531	143	med_exam      
+[1105] 48	1535	1538	143	med_exam      
+[1241] 48	1737	1739	斑塊	location      
+Recognize article 49, 醫師：今天自己來嗎？民眾：喔爸爸也有來。醫師：那他會進來嗎還是？民眾：欸阿……醫師：嘿阿他在外面。嗨 ...
+[38] 49	50	52	叔叔	family        
+[46] 49	60	62	清華	profession    
+[59] 49	77	80	化學系	ID            
+[69] 49	91	93	小美	name          
+[94] 49	126	131	9月10號	time          
+[113] 49	153	158	9月10號	time          
+[115] 49	159	162	阿小美	name          
+[241] 49	335	337	36	med_exam      
+[246] 49	342	344	36	med_exam      
+[251] 49	349	351	36	med_exam      
+[253] 49	352	356	36.9	med_exam      
+[255] 49	357	361	36.7	med_exam      
+[257] 49	362	366	36.6	med_exam      
+[591] 49	840	844	45分鐘	time          
+[675] 49	961	963	小明	name          
+[690] 49	986	989	禮拜三	time          
+[692] 49	990	992	下午	time          
+[817] 49	1172	1174	下午	time          
+[841] 49	1208	1211	禮拜一	time          
+[843] 49	1212	1214	早上	time          
+[899] 49	1297	1299	下午	time          
+[930] 49	1340	1343	禮拜一	time          
+[932] 49	1344	1346	早上	time          
+[937] 49	1352	1355	禮拜一	time          
+[939] 49	1356	1358	早上	time          
+[947] 49	1368	1370	教授	profession    
+[1028] 49	1477	1480	SSA	name          
+[1436] 49	2058	2060	台北	location      
+[1441] 49	2065	2067	高雄	location      
+[1481] 49	2121	2123	學校	location      
+[1538] 49	2196	2198	學校	location      
+[1897] 49	2702	2704	西醫	name          
+[2001] 49	2849	2851	台北	location      
+[2024] 49	2877	2879	國中	profession    
+[2060] 49	2927	2930	阿小美	name          
+[2072] 49	2943	2946	禮拜一	time          
+[2146] 49	3042	3045	禮拜一	time          
+[2149] 49	3049	3053	9月8號	time          
+[2950] 49	4168	4171	禮拜一	time          
+[3197] 49	4518	4520	台北	location      
+[3198] 49	4520	4522	榮總	location      
+[3210] 49	4534	4536	台大	location      
+[3215] 49	4541	4543	台大	location      
+[3219] 49	4547	4549	台大	location      
+[3386] 49	4778	4780	小美	name          
+Recognize article 50, 醫師：檢驗報告嗎？家屬：在奇美有一份……民眾：說我白血球過低。醫師：過低喔？家屬：恩。民眾：會嗎？我 ...
+[9] 50	13	15	奇美	location      
+[64] 50	82	85	禮拜六	time          
+[67] 50	87	90	禮拜六	time          
+[70] 50	92	95	禮拜六	time          
+[72] 50	96	98	早上	time          
+[88] 50	129	133	7月17	time          
+[93] 50	138	140	前天	time          
+[97] 50	144	146	前天	time          
+[102] 50	151	153	前天	time          
+[107] 50	159	161	昨天	time          
+[110] 50	163	165	昨天	time          
+[136] 50	200	202	38	med_exam      
+[139] 50	204	206	38	med_exam      
+[145] 50	212	216	38.6	med_exam      
+[147] 50	217	221	38.7	med_exam      
+[226] 50	334	336	昨天	time          
+[319] 50	463	465	早上	time          
+[478] 50	697	699	桃腺	location      
+[493] 50	721	725	36.9	med_exam      
+[497] 50	729	733	36.9	med_exam      
+[826] 50	1201	1205	11.幾	med_exam      
+[830] 50	1209	1213	11.幾	med_exam      
+[840] 50	1224	1226	11	med_exam      
+[885] 50	1290	1293	11號	time          
+[905] 50	1320	1322	8號	time          
+[998] 50	1459	1462	禮拜五	time          
+[1000] 50	1463	1465	早上	time          
+[1020] 50	1490	1492	早上	time          
+[1038] 50	1517	1519	早上	time          
+[1393] 50	2008	2013	88821	ID            
+[1403] 50	2028	2032	27.7	med_exam      
+[1965] 50	2812	2815	冰豆漿	name          
+[2324] 50	3335	3337	榮總	location      
+[2452] 50	3513	3515	台大	location      
+[2621] 50	3750	3752	早上	time          
+Recognize article 51, 醫師：還是之前照錯，都不能吃喔？民眾：就從……吃到第三週開始人就很不舒服然後就……醫師：真的喔。民眾 ...
+[127] 51	170	172	奇美	location      
+[172] 51	231	233	痾吳	name          
+[464] 51	625	627	奇美	location      
+[922] 51	1263	1266	1月份	time          
+[935] 51	1283	1286	1月份	time          
+[1103] 51	1523	1528	1月16號	time          
+[1110] 51	1535	1540	1月16號	time          
+[1114] 51	1545	1547	1月	time          
+[1124] 51	1558	1563	1月16號	time          
+[1742] 51	2391	2392	吳	name          
+[1825] 51	2506	2509	三恩美	med_exam      
+[2078] 51	2866	2868	65	med_exam      
+[2089] 51	2882	2884	54	med_exam      
+[2471] 51	3395	3397	奇美	location      
+[2770] 51	3796	3798	54	med_exam      
+[2932] 51	4000	4003	22萬	money         
+[2957] 51	4034	4037	22萬	money         
+[3185] 51	4366	4368	明天	time          
+[3206] 51	4396	4398	明天	time          
+[3486] 51	4779	4781	學校	location      
+[3533] 51	4847	4849	66	time          
+[3540] 51	4858	4860	66	time          
+[4041] 51	5574	5579	2020年	time          
+[4042] 51	5579	5581	5月	time          
+Recognize article 52, 醫師：阿那那個，我們抽血的結果看起來是肝指數已經恢復正常了。民眾：喔喔，好好好好。醫師：我們之前不是 ...
+[69] 52	101	104	330	money         
+[121] 52	176	181	15000	money         
+[131] 52	195	199	3200	money         
+[135] 52	203	207	3200	money         
+[173] 52	262	266	10.7	med_exam      
+[194] 52	294	298	10.7	med_exam      
+[352] 52	532	535	780	med_exam      
+[361] 52	545	548	780	med_exam      
+[468] 52	702	704	阿林	name          
+[755] 52	1090	1092	老師	profession    
+[805] 52	1164	1169	7月15號	time          
+[844] 52	1221	1226	7月28號	time          
+[875] 52	1270	1273	阿小美	name          
+[880] 52	1277	1279	老師	profession    
+[918] 52	1333	1335	老師	profession    
+[1097] 52	1587	1592	8月20號	time          
+[1104] 52	1602	1607	8月20號	time          
+Recognize article 53, 醫師：說是在腰痛是不是？民眾：嘿啊。工作。醫師：是怎樣啊？民眾：就是工作可能去傷到吧。醫師：阿你是什 ...
+[302] 53	409	413	十月二號	time          
+[323] 53	439	444	六百七十九	med_exam      
+[384] 53	526	528	台南	location      
+[386] 53	529	532	奇美那	location      
+[392] 53	538	540	奇美	location      
+[476] 53	650	653	一千二	med_exam      
+Recognize article 54, 醫師：阿明吃藥應該還OK啦齁？民眾：嗯，對。醫師：沒有問題，然後我們抽血，我看看。這次沒抽？民眾：對 ...
+[2] 54	3	5	阿明	name          
+[188] 54	254	256	去年	time          
+[412] 54	550	552	超市	name          
+[426] 54	567	573	十二月二十二	time          
+Recognize article 55, 醫師：剛睡醒這樣，好。最近應該，吃這藥還，還合適啦齁？民眾：是。醫師：會不會影響睡眠？民眾：是不會。 ...
+[531] 55	728	730	早上	time          
+[539] 55	738	740	早上	time          
+[768] 55	1043	1045	去年	time          
+[781] 55	1063	1065	去年	time          
+[786] 55	1072	1074	今年	time          
+[810] 55	1104	1106	今年	time          
+[813] 55	1109	1111	五月	time          
+Recognize article 56, 醫師：阿最近你住院喔？家屬：阿，回來啦。醫師：哼。家屬：星期三回來的。醫師：阿出院後有比較好嗎？家屬 ...
+[20] 56	28	31	星期三	time          
+[1114] 56	1528	1530	榮總	location      
+[1593] 56	2152	2157	九月二十五	time          
+[1608] 56	2175	2179	十月一號	time          
+[1634] 56	2216	2219	禮拜四	time          
+[1636] 56	2220	2222	下午	time          
+Recognize article 57, 醫師：好。那政鴻的話，政鴻，你上次抽血的時候，有，有空腹嗎？有空腹十五個小時嗎？還是。民眾：不到十五 ...
+[294] 57	416	419	八十五	med_exam      
+[298] 57	423	426	八十五	med_exam      
+[308] 57	441	444	一七五	med_exam      
+[312] 57	448	451	一七五	med_exam      
+[644] 57	889	892	一九二	med_exam      
+[1291] 57	1777	1779	嘉芳	location      
+[1468] 57	2017	2019	小叔	location      
+[1473] 57	2024	2026	小叔	location      
+[1476] 57	2028	2030	爺爺	family        
+[1483] 57	2038	2040	表哥	family        
+[1485] 57	2041	2043	表姊	family        
+[1515] 57	2081	2084	十二月	time          
+Recognize article 58, 醫師：啊病例56783寶珠，你有什麼地方不舒服嗎？家屬：回去之後就一直乾咳，然後咳到這一兩天有痰。醫 ...
+[4] 58	6	11	56783	med_exam      
+[151] 58	217	220	禮拜四	time          
+[159] 58	232	234	早上	time          
+Recognize article 59, 民眾：我禮拜天停中午，啊禮拜一也停。醫師：中午。民眾：對，啊禮拜二那天來就是，因為我上次有聽你講說可 ...
+[5] 59	8	10	中午	time          
+[8] 59	12	15	禮拜一	time          
+[14] 59	21	23	中午	time          
+[21] 59	30	33	禮拜二	time          
+[129] 59	164	167	禮拜一	time          
+[131] 59	168	172	吃禮拜二	time          
+[332] 59	442	444	昨天	time          
+[347] 59	460	463	巫醫師	name          
+[460] 59	615	616	王	name          
+[469] 59	625	627	陽明	location      
+[545] 59	726	728	昨天	time          
+[553] 59	737	739	昨天	time          
+[563] 59	750	752	昨天	time          
+[565] 59	753	755	早上	time          
+[691] 59	920	923	中中午	time          
+[765] 59	1027	1028	王	name          
+[839] 59	1124	1126	台大	location      
+[848] 59	1135	1137	台大	location      
+[1402] 59	1917	1919	台大	location      
+[1418] 59	1941	1943	陽明	location      
+[1498] 59	2052	2055	12樓	med_exam      
+Recognize article 60, 民眾：就就沒有來。醫師：所以是在忙甚麼？個管師：忙開店。民眾：痾對哈哈哈。醫師：喔。民眾：要幫忙…… ...
+[69] 60	96	98	嘉義	location      
+[75] 60	104	106	嘉義	location      
+[77] 60	107	109	台南	location      
+[378] 60	519	523	7，8月	time          
+[396] 60	547	549	8月	time          
+[856] 60	1177	1180	8月7	time          
+[860] 60	1184	1187	8月7	time          
+[868] 60	1196	1199	禮拜三	time          
+[870] 60	1200	1202	下午	time          
+[874] 60	1206	1209	禮拜三	time          
+[876] 60	1210	1212	下午	time          
+[879] 60	1215	1217	早上	time          
+[884] 60	1222	1224	早上	time          
+[888] 60	1228	1231	禮拜四	time          
+[891] 60	1233	1237	痾禮拜四	time          
+[893] 60	1238	1240	早上	time          
+[897] 60	1244	1247	禮拜五	time          
+[899] 60	1248	1250	早上	time          
+[908] 60	1259	1262	禮拜五	time          
+[910] 60	1263	1265	早上	time          
+[916] 60	1271	1273	早上	time          
+[946] 60	1315	1319	9點45	med_exam      
+[963] 60	1339	1342	禮拜三	time          
+[965] 60	1343	1345	下午	time          
+[969] 60	1349	1352	禮拜三	time          
+[976] 60	1360	1362	下午	time          
+[981] 60	1367	1369	早上	time          
+[1014] 60	1407	1410	禮拜五	time          
+[1016] 60	1411	1413	早上	time          
+[1025] 60	1423	1426	8月7	time          
+[1029] 60	1430	1433	8月7	time          
+[1107] 60	1540	1543	5月份	time          
+[1112] 60	1549	1551	5月	time          
+[1116] 60	1554	1556	35	med_exam      
+[1250] 60	1718	1723	6月15號	time          
+[1319] 60	1815	1818	李小龍	name          
+[1323] 60	1822	1825	李小龍	name          
+[1360] 60	1875	1880	6月15號	time          
+[1375] 60	1898	1903	6月15號	time          
+[1439] 60	1986	1989	台北市	location      
+[1466] 60	2028	2030	85	med_exam      
+[1470] 60	2034	2038	1996	med_exam      
+[1475] 60	2043	2047	1996	med_exam      
+[1480] 60	2053	2058	5月21號	time          
+[1485] 60	2064	2068	5月21	time          
+[1498] 60	2084	2086	6月	time          
+[1504] 60	2091	2093	35	med_exam      
+[1514] 60	2105	2108	15號	time          
+[1531] 60	2130	2135	6月15號	time          
+[1540] 60	2146	2151	6月15號	time          
+[1573] 60	2192	2197	6月15號	time          
+[1588] 60	2220	2225	6月15號	time          
+[1621] 60	2262	2267	6月15號	time          
+[1624] 60	2269	2274	6月15號	time          
+[1632] 60	2283	2288	6月15號	time          
+[1636] 60	2292	2297	6月15號	time          
+[1750] 60	2443	2445	5月	time          
+[1761] 60	2456	2461	6月15號	time          
+[1788] 60	2497	2499	5月	time          
+[1793] 60	2503	2505	35	med_exam      
+[1797] 60	2509	2511	4月	time          
+Recognize article 61, 醫師：那我們先看上次抽血的報告，誒都正常。民眾：恩。醫師：就是愛滋梅毒，肝腎功能都正常。民眾：恩。醫 ...
+[1473] 61	2022	2028	11月12號	time          
+[1483] 61	2038	2043	11月12	time          
+[1491] 61	2051	2054	禮拜三	time          
+[1493] 61	2055	2057	早上	time          
+[1549] 61	2129	2135	11月12號	time          
+[1551] 61	2136	2138	平日	time          
+[1656] 61	2280	2282	台北	location      
+[1665] 61	2293	2295	台北	location      
+[1702] 61	2343	2345	五月	time          
+[1733] 61	2388	2390	三百	med_exam      
+[1759] 61	2421	2426	11月12	time          
+Recognize article 62, 醫師：病例0938，阿寬，這個月還好嗎？民衆：ok啊。醫師：所以你現在是吃任務型嗎？民衆：嗯。醫師： ...
+[651] 62	906	911	11月29	time          
+[655] 62	915	918	禮拜五	time          
+[657] 62	919	921	下午	time          
+Recognize article 63, 醫師：最近還好嗎？民衆：還好。醫師：工作還好嗎？民眾：還好啊，在當國中老師差不多就這樣。醫師：所以你 ...
+[23] 63	33	35	國中	profession    
+[24] 63	35	37	老師	profession    
+Recognize article 64, 醫師：哇今天，最後兩個月了耶。民眾：對阿很快耶。醫師：日子在過真是時光飛逝。民眾：對阿。醫師：好所以 ...
+[701] 64	976	985	287179403	med_exam      
+[797] 64	1117	1119	泰國	location      
+Recognize article 65, 個管師：來坐這裡。民眾：好，坐這裡嗎？好，靠你那麼近？個管師：靠我近一點好啊，不好嗎？會讓你很緊張嗎 ...
+Recognize article 66, 個管師：好喘……哈哈哈哈。民眾：哈哈。個管師：好。小明這個月還好嗎？民眾：很好啊。個管師：很好的意思 ...
+[17] 66	25	27	小明	name          
+[172] 66	253	255	前天	time          
+[183] 66	269	271	前天	time          
+Recognize article 67, 個管師：所以你是去篩檢的時候……民眾：恩。個管師：你去篩檢的時候然後許小姐跟你說你可以來這邊吃PrE ...
+[466] 67	678	679	王	name          
+[523] 67	767	771	LINE	contact       
+[525] 67	772	774	群組	profession    
+[553] 67	812	816	LINE	contact       
+[597] 67	881	882	王	name          
+[608] 67	895	898	360	med_exam      
+[742] 67	1094	1097	20天	time          
+[813] 67	1204	1207	禮拜三	time          
+[815] 67	1208	1211	禮拜五	time          
+[824] 67	1223	1224	王	name          
+[835] 67	1236	1237	王	name          
+[838] 67	1240	1243	禮拜三	time          
+[840] 67	1244	1246	下午	time          
+[842] 67	1247	1250	禮拜五	time          
+[844] 67	1251	1253	早上	time          
+[873] 67	1290	1293	禮拜二	time          
+[879] 67	1300	1303	禮拜二	time          
+[887] 67	1313	1316	禮拜二	time          
+[902] 67	1333	1336	28天	time          
+[925] 67	1366	1369	禮拜三	time          
+[941] 67	1389	1392	禮拜三	time          
+[955] 67	1412	1415	禮拜五	time          
+[960] 67	1419	1422	禮拜五	time          
+[981] 67	1452	1455	禮拜五	time          
+[988] 67	1464	1467	28天	time          
+[996] 67	1478	1480	28	med_exam      
+[1085] 67	1599	1602	28天	time          
+Recognize article 68, 個管師：好喔，過去這一個月還好嗎？民眾：恩，還可以。個管師：那今天是請假？民眾：沒有，晚上上班。個管 ...
+[469] 68	683	685	早上	time          
+Recognize article 69, 民眾：不太好哈哈哈。個管師：就是工作、心情……民眾：壓力很大。個管師：哪一方面壓力？民眾：各方面的壓 ...
+[894] 69	1251	1255	9月10	time          
+[903] 69	1267	1270	9月9	time          
+[905] 69	1271	1275	9月11	time          
+[1001] 69	1407	1410	11號	time          
+[1012] 69	1426	1428	4點	time          
+[1017] 69	1432	1435	12號	time          
+[1018] 69	1435	1437	4點	time          
+[1143] 69	1597	1601	9月8號	time          
+[1171] 69	1639	1641	4點	time          
+[1175] 69	1645	1647	4點	time          
+Recognize name entities, done.
