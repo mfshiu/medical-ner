@@ -43,7 +43,7 @@ print("done.")
 # Segment articles
 article_words = []
 print("Segment articles...", end=' ')
-load_nes = util.load_name_entities("dataset/named_entities.txt")
+load_nes = util.load_name_entities("../dataset/named_entities.txt")
 coerce_words = dict([(k, 1) for k in load_nes])
 ws = WS("../ckipdata")
 article_words = ws(articles, coerce_dictionary=util.construct_dictionary(

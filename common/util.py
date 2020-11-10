@@ -39,6 +39,47 @@ def gen_word_to_weight(addition_dic={}):
     return word_to_weight
 
 
+# def get_conunt_entities():
+#     name_entities = []
+#     mon1 = [i for i in range(1,13)]
+#     units = ["個", "顆", "次", "下", "串", "包", "張", "袋", "本", "罐", "箱", "項"
+#         , "項", "項", "項", "項", "項", "項", "項", "項", "項"]
+#     days = [31 ,30, 29 ,30 ,31 ,30 ,31 ,31 ,30 ,31 ,30 ,31]
+#     day_name = ['', '日', '號']
+#     word_to_weight = {}
+#
+#     for mm in [mon1, mon2]:
+#         for i, m in enumerate(mm):
+#             for d in range(days[i]):
+#                 for dn in day_name:
+#                     time_entities.append("{}月{}{}".format(m, d+1, dn))
+#             for d in mon2[:10]:
+#                 for dn in day_name:
+#                     time_entities.append("{}月{}{}".format(m, d, dn))
+#             for d in mon2[:9]:
+#                 for dn in day_name:
+#                     time_entities.append("{}月十{}{}".format(m, d, dn))
+#                     time_entities.append("{}月二十{}{}".format(m, d, dn))
+#             for dn in day_name:
+#                 time_entities.append("{}月三十{}".format(m, dn))
+#                 time_entities.append("{}月三十一{}".format(m, dn))
+#
+#     day_name = ['日', '號', '天']
+#     for d in range(31):
+#         for dn in day_name:
+#             word_to_weight["{}{}".format(d + 1, dn)] = 1
+#
+#     units = ['分', '分鐘']  #, '個', '次']
+#     num = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "兩"]
+#     for u in units:
+#         for m in range(60):
+#             time_entities.append("{}{}".format(m + 1, u))
+#         for m in num:
+#             time_entities.append("{}{}".format(m, u))
+#
+#     return time_entities
+
+
 def get_time_entities():
     time_entities = []
     mon1 = [i for i in range(1,13)]
