@@ -59,7 +59,7 @@ def parse_nes(ckip_entity_words):
             if word_type in ckip_type_map \
                     and word not in ckip_dropped_words \
                     and not word.startswith('阿') \
-                    and not word.startswith('恩'):
+                    and not word.startswith('恩') \
                     and not word.startswith('齁') \
                     and not word.startswith('哈'):
                 nes[word] = ckip_type_map[word_type]
