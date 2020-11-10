@@ -60,6 +60,8 @@ def parse_nes(ckip_entity_words):
                     and word not in ckip_dropped_words \
                     and not word.startswith('阿') \
                     and not word.startswith('恩'):
+                    and not word.startswith('齁') \
+                    and not word.startswith('哈'):
                 nes[word] = ckip_type_map[word_type]
     return nes
 
@@ -130,7 +132,9 @@ for article_id, words in enumerate(article_words):
     x, t = convert_to_word_id(words)
     for i in range(len(x)):
         word = words[i]
-        if word in ckip_nes:
+        if word in load_nes:
+            guess_text = load_nes[word]
+        elif word in ckip_nes:
             guess_text = ckip_nes[word]
         else:
             guess_text = guess_type(x[[i]], t[[i]])
