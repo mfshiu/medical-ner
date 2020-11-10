@@ -22,7 +22,7 @@ vocab_size = len(char_to_id)
 wordvec_size = int(16/1)
 hidden_size = int(256*2)
 batch_size = int(128*2)
-max_epoch = int(len(x_train) / 5000) + 1
+max_epoch = max(10, int(len(x_train) / 15000))
 max_grad = 5.0
 
 model = AttentionSeq2seq(vocab_size, wordvec_size, hidden_size)

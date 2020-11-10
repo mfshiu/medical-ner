@@ -32,19 +32,6 @@ def loadInputFile2(file_path):
     return training_set, named_entities
 
 
-def load_name_entities(file_path):
-    with open(file_path, 'r', encoding='utf8') as fp:
-        lines = fp.readlines()
-
-    nes = {}
-    for line in lines:
-        tokens = line.split(" ")
-        k, v = tokens[0].strip(), tokens[1].strip()
-        nes[k] = v
-
-    return nes
-
-
 if __name__ == '__main__':
     if len(sys.argv) != 4:
         print("Error: need to specify source file name and output file name")
@@ -66,7 +53,8 @@ if __name__ == '__main__':
 
     print("Segmenting...", end=' ')
     ws = WS("./ckipdata")
-    load_nes = load_name_entities("dataset/named_entities.txt")
+    load_nes = util.load_name_entities("dataset/named_entities.txt")
+    default_name_entities.update(load_nes)
     coerce_words = dict([(k, 1) for k in load_nes])
     coerce_words.update({NAME_ENTITY_MARK: 1})
     article_words = ws(articles, coerce_dictionary=util.construct_dictionary(coerce_words))
@@ -80,12 +68,12 @@ if __name__ == '__main__':
         for ne in named_entities[i]:
             k, v = ne[3], ne[4]
             train_data.append(k.ljust(29) + "_" + v + "\n")
-            if k not in default_name_entities and not k.isnumeric():
+            if k not in default_name_entities and not k.isdigit():
                 default_name_entities[k] = v
         for s in ss:
             if NAME_ENTITY_MARK != s:
-                if s in load_nes:
-                    train_data.append(s.ljust(29) + "_" + load_nes[s] + "\n")
+                if s in default_name_entities:
+                    train_data.append(s.ljust(29) + "_" + default_name_entities[s] + "\n")
                 else:
                     train_data.append(s.ljust(29) + "_" + "O" + "\n")
     train_data[-1] = train_data[-1][:-1]

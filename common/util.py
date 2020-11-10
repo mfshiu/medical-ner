@@ -79,6 +79,19 @@ def get_time_entities():
     return time_entities
 
 
+def load_name_entities(file_path):
+    with open(file_path, 'r', encoding='utf8') as fp:
+        lines = fp.readlines()
+
+    nes = {}
+    for line in lines:
+        tokens = line.split(" ")
+        k, v = tokens[0].strip(), tokens[1].strip()
+        nes[k] = v
+
+    return nes
+
+
 def preprocess(text):
     text = text.lower()
     text = text.replace('.', ' .')
