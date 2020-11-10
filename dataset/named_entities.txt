@@ -5591,3 +5591,8 @@ EMAIL contact
 一萬五 med_exam
 一萬零四百 med_exam
 一萬零五百 med_exam
+可邁丁 O
+阿美達錠 O
+過敏 O
+小叔 family
+中藥 profession

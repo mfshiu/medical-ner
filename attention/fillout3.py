@@ -31,7 +31,7 @@ batch_size = 128 * 2
 model = AttentionSeq2seq(vocab_size, wordvec_size, hidden_size)
 model.load_params("medical-60.pkl")
 
-test_file = "../dataset/development_2.txt"
+test_file = "../dataset/development_0.txt"
 fillout_file = "../output/development_2-out.tsv"
 
 question_size = 29
@@ -50,13 +50,15 @@ ckip_type_map = {
     "GPE": "location", "ORG": "organization", "ORG": "organization", "DATE": "time", "PERSON": "name"
     , "TIME": "time", "FAC": "location", "LOC": "location", "d": "d", "e": "5"
 }
-ckip_dropped_words = set({'齁', '阿'})
+ckip_dropped_words = set({'齁', '阿', '哈哈', '以'})
 def parse_nes(ckip_entity_words):
     nes = {}
     for i, entity_words in enumerate(ckip_entity_words):
         for entity in entity_words:
             word, word_type = entity[3], entity[2]
-            if word_type in ckip_type_map and word not in ckip_dropped_words:
+            if word_type in ckip_type_map \
+                    and word not in ckip_dropped_words \
+                    and not word.startswith('阿'):
                 nes[word] = ckip_type_map[word_type]
     return nes
 
