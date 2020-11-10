@@ -7,7 +7,7 @@ from common.config import GPU
 from common.config import Device as GPU_Device
 from dataset import sequence
 from attention_seq2seq import AttentionSeq2seq
-from ckiptagger import construct_dictionary, WS
+from ckiptagger import construct_dictionary, WS, POS, NER
 from common import util
 
 # if GPU:
@@ -31,7 +31,7 @@ batch_size = 128 * 2
 model = AttentionSeq2seq(vocab_size, wordvec_size, hidden_size)
 model.load_params("medical-60.pkl")
 
-test_file = "../dataset/development_2.txt"
+test_file = "../dataset/development_0.txt"
 fillout_file = "../output/development_2-out.txt"
 
 question_size = 29
@@ -45,14 +45,33 @@ with open(test_file, "r") as fp:
     articles = [a for i, a in enumerate(fp) if (i - 1) % 5 == 0]
 print("done.")
 
+
+ckip_type_map = {
+    "GPE": "location", "ORG": "organization", "ORG": "organization", "DATE": "time", "PERSON": "name"
+    , "TIME": "time", "FAC": "location", "LOC": "location", "d": "d", "e": "5"
+}
+def parse_nes(ckip_entity_words):
+    nes = {}
+    for i, entity_words in enumerate(ckip_entity_words):
+        for entity in entity_words:
+            if entity[2] in ckip_type_map:
+                nes[entity[3]] = ckip_type_map[entity[2]]
+    return nes
+
 # Segment articles
-article_words = []
-print("Segment articles...", end=' ')
+print("Segment articles...")
 load_nes = util.load_name_entities("../dataset/named_entities.txt")
 coerce_words = dict([(k, 1) for k in load_nes])
 ws = WS("../ckipdata") # , disable_cuda=not GPU)
+print("  CKIP Pos articles...")
+pos = POS("../ckipdata")
+print("  CKIP Ner articles...")
+ner = NER("../ckipdata")
 article_words = ws(articles, coerce_dictionary=util.construct_dictionary(coerce_words))
-print("done.")
+ckip_pos_words = pos(article_words)
+ckip_entity_words = ner(article_words, ckip_pos_words)
+ckip_nes = parse_nes(ckip_entity_words)
+print("Segment articles done.")
 
 # Recognize name entities
 print("Recognize name entities...")
@@ -86,6 +105,16 @@ def convert_to_word_id(words):
     return x, t
 
 
+def guess_type(question, correct):
+    correct = correct.flatten()
+    start_id = correct[0]
+    correct = correct[1:]
+    guess = model.generate(question, start_id, len(correct))
+    guess_text = ''.join([id_to_char[int(c)] for c in guess]).strip()
+
+    return guess_text
+
+
 # Recognize words in each article
 ans_none = answer_none[1:].strip()
 for article_id, words in enumerate(article_words):
@@ -95,13 +124,12 @@ for article_id, words in enumerate(article_words):
     rows = []
     x, t = convert_to_word_id(words)
     for i in range(len(x)):
-        question, correct = x[[i]], t[[i]]
-        correct = correct.flatten()
-        start_id = correct[0]
-        correct = correct[1:]
-        guess = model.generate(question, start_id, len(correct))
-        guess_text = ''.join([id_to_char[int(c)] for c in guess]).strip()
         word = words[i]
+        if word in ckip_nes:
+            guess_text = ckip_nes[word]
+        else:
+            guess_text = guess_type(x[[i]], t[[i]])
+
         end_position = start_position + len(word)
         if ans_none != guess_text:
             row = "{}\t{}\t{}\t{}\t{}\n".format(
