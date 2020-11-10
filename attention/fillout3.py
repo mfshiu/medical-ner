@@ -82,7 +82,7 @@ def convert_to_word_id(words):
 
 
 # Recognize words in each article
-ans_none = answer_none[1:]
+ans_none = answer_none[1:].strip()
 for article_id, words in enumerate(article_words):
     print("Recognize article %d, %s ..."%(article_id, articles[article_id][:50]))
 
