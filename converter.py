@@ -50,9 +50,8 @@ if __name__ == '__main__':
 
     print("Segmenting...", end=' ')
     ws = WS("./ckipdata")
-    article_words = ws(articles, coerce_dictionary=util.construct_dictionary({
-        NAME_ENTITY_MARK: 1,
-    }))
+    dic = util.gen_word_to_weight({NAME_ENTITY_MARK: 1})
+    article_words = ws(articles, coerce_dictionary=util.construct_dictionary(dic))
     print("done.")
 
     print("Geterating data...")

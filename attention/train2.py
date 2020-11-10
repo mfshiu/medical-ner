@@ -11,7 +11,7 @@ from common.util import eval_seq2seq
 from attention_seq2seq import AttentionSeq2seq
 
 # 載入資料
-(x_train, t_train), (x_test, t_test) = sequence.load_data('train_180000.txt')
+(x_train, t_train), (x_test, t_test) = sequence.load_data('train2.txt')
 char_to_id, id_to_char = sequence.get_vocab()
 
 # 反轉輸入內容

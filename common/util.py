@@ -25,7 +25,7 @@ def construct_dictionary(word_to_weight):
 
 
 # generate coerce dictionary
-def gen_coerec_dic():
+def gen_word_to_weight(addition_dic={}):
     mon1 = [i for i in range(1,13)]
     mon2 = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"]
     days = [31 ,30, 29 ,30 ,31 ,30 ,31 ,31 ,30 ,31 ,30 ,31]
@@ -62,7 +62,12 @@ def gen_coerec_dic():
         for m in num:
             word_to_weight["{}{}".format(m, u)] = 1
 
-    return construct_dictionary(word_to_weight)
+    specials = ['個管師']
+    for s in specials:
+        word_to_weight[s] = 1
+
+    word_to_weight.update(addition_dic)
+    return word_to_weight
 
 
 def preprocess(text):

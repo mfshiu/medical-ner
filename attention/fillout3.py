@@ -44,7 +44,7 @@ print("done.")
 article_words = []
 print("Segment articles...", end=' ')
 ws = WS("../ckipdata")
-article_words = ws(articles, coerce_dictionary=util.gen_coerec_dic())
+article_words = ws(articles, coerce_dictionary=util.construct_dictionary(util.gen_word_to_weight()))
 print("done.")
 
 # Recognize name entities
