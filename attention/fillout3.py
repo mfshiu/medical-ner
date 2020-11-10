@@ -10,8 +10,8 @@ from attention_seq2seq import AttentionSeq2seq
 from ckiptagger import construct_dictionary, WS
 from common import util
 
-if GPU:
-    os.environ["CUDA_VISIBLE_DEVICES"] = str(GPU_Device)
+# if GPU:
+#     os.environ["CUDA_VISIBLE_DEVICES"] = str(GPU_Device)
 
 x_train, t_train = sequence.load_data_without_test('train_300000.txt', shuffle=False)
 char_to_id, id_to_char = sequence.get_vocab()
@@ -50,7 +50,7 @@ article_words = []
 print("Segment articles...", end=' ')
 load_nes = util.load_name_entities("../dataset/named_entities.txt")
 coerce_words = dict([(k, 1) for k in load_nes])
-ws = WS("../ckipdata", disable_cuda=not GPU)
+ws = WS("../ckipdata") # , disable_cuda=not GPU)
 article_words = ws(articles, coerce_dictionary=util.construct_dictionary(coerce_words))
 print("done.")
 
