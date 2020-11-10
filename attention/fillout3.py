@@ -31,7 +31,7 @@ batch_size = 128 * 2
 model = AttentionSeq2seq(vocab_size, wordvec_size, hidden_size)
 model.load_params("medical-60.pkl")
 
-test_file = "../dataset/development_0.txt"
+test_file = "../dataset/development_2.txt"
 fillout_file = "../output/development_2-out.txt"
 
 question_size = 29
