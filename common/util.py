@@ -23,13 +23,27 @@ def construct_dictionary(word_to_weight):
 
     return length_word_weight
 
-
 # generate coerce dictionary
 def gen_word_to_weight(addition_dic={}):
+    tes = get_time_entities()
+
+    word_to_weight = {}
+    for te in tes:
+        word_to_weight[te] = 1
+
+    specials = ['個管師']
+    for s in specials:
+        word_to_weight[s] = 1
+
+    word_to_weight.update(addition_dic)
+    return word_to_weight
+
+
+def get_time_entities():
+    time_entities = []
     mon1 = [i for i in range(1,13)]
     mon2 = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"]
     days = [31 ,30, 29 ,30 ,31 ,30 ,31 ,31 ,30 ,31 ,30 ,31]
-    days2 = [31 ,30, 29 ,30 ,31 ,30 ,31 ,31 ,30 ,31 ,30 ,31]
     day_name = ['', '日', '號']
     word_to_weight = {}
 
@@ -37,17 +51,17 @@ def gen_word_to_weight(addition_dic={}):
         for i, m in enumerate(mm):
             for d in range(days[i]):
                 for dn in day_name:
-                    word_to_weight["{}月{}{}".format(m, d+1, dn)] = 1
+                    time_entities.append("{}月{}{}".format(m, d+1, dn))
             for d in mon2[:10]:
                 for dn in day_name:
-                    word_to_weight["{}月{}{}".format(m, d, dn)] = 1
+                    time_entities.append("{}月{}{}".format(m, d, dn))
             for d in mon2[:9]:
                 for dn in day_name:
-                    word_to_weight["{}月十{}{}".format(m, d, dn)] = 1
-                    word_to_weight["{}月二十{}{}".format(m, d, dn)] = 1
+                    time_entities.append("{}月十{}{}".format(m, d, dn))
+                    time_entities.append("{}月二十{}{}".format(m, d, dn))
             for dn in day_name:
-                word_to_weight["{}月三十{}".format(m, dn)] = 1
-                word_to_weight["{}月三十一{}".format(m, dn)] = 1
+                time_entities.append("{}月三十{}".format(m, dn))
+                time_entities.append("{}月三十一{}".format(m, dn))
 
     day_name = ['日', '號', '天']
     for d in range(31):
@@ -58,16 +72,11 @@ def gen_word_to_weight(addition_dic={}):
     num = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "兩"]
     for u in units:
         for m in range(60):
-            word_to_weight["{}{}".format(m + 1, u)] = 1
+            time_entities.append("{}{}".format(m + 1, u))
         for m in num:
-            word_to_weight["{}{}".format(m, u)] = 1
+            time_entities.append("{}{}".format(m, u))
 
-    specials = ['個管師']
-    for s in specials:
-        word_to_weight[s] = 1
-
-    word_to_weight.update(addition_dic)
-    return word_to_weight
+    return time_entities
 
 
 def preprocess(text):

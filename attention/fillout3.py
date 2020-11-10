@@ -93,7 +93,7 @@ for article_id, words in enumerate(article_words):
         start_id = correct[0]
         correct = correct[1:]
         guess = model.generate(question, start_id, len(correct))
-        guess_text = ''.join([id_to_char[int(c)] for c in guess])
+        guess_text = ''.join([id_to_char[int(c)] for c in guess]).strip()
         word = words[i]
         end_position = start_position + len(word)
         if ans_none != guess_text:
