@@ -50,7 +50,7 @@ ckip_type_map = {
     "GPE": "location", "ORG": "organization", "ORG": "organization", "DATE": "time", "PERSON": "name"
     , "TIME": "time", "FAC": "location", "LOC": "location", "d": "d", "e": "5"
 }
-ckip_dropped_words = set({'齁', '阿', '哈哈', '以'})
+ckip_dropped_words = set({'齁', '阿', '哈哈', '以', '恩恩'})
 def parse_nes(ckip_entity_words):
     nes = {}
     for i, entity_words in enumerate(ckip_entity_words):
@@ -58,7 +58,8 @@ def parse_nes(ckip_entity_words):
             word, word_type = entity[3], entity[2]
             if word_type in ckip_type_map \
                     and word not in ckip_dropped_words \
-                    and not word.startswith('阿'):
+                    and not word.startswith('阿') \
+                    and not word.startswith('恩'):
                 nes[word] = ckip_type_map[word_type]
     return nes
 

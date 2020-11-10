@@ -5596,3 +5596,4 @@ EMAIL contact
 過敏 O
 小叔 family
 中藥 profession
+超音波 O
