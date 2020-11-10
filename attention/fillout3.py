@@ -8,7 +8,7 @@ from ckiptagger import construct_dictionary, WS
 from common import util
 
 
-x_train, t_train = sequence.load_data_without_test('train_180000.txt', shuffle=False)
+x_train, t_train = sequence.load_data_without_test('train_300000.txt', shuffle=False)
 char_to_id, id_to_char = sequence.get_vocab()
 vocab_size = len(char_to_id)
 
@@ -24,10 +24,10 @@ hidden_size = 256 * 2
 batch_size = 128 * 2
 
 model = AttentionSeq2seq(vocab_size, wordvec_size, hidden_size)
-model.load_params("medical-37.pkl")
+model.load_params("medical-60.pkl")
 
-test_file = "../dataset/development_1.txt"
-fillout_file = "../output/development_1-out.txt"
+test_file = "../dataset/development_2.txt"
+fillout_file = "../output/development_2-out.txt"
 
 question_size = 29
 answer_size = 15
