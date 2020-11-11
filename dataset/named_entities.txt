@@ -4803,7 +4803,6 @@ SARS clinical_event
 早晚 time
 2.7 med_exam
 下禮拜四 time
-阿兩 name
 17.6 med_exam
 前兩三天 time
 前一天晚上 time
@@ -5357,8 +5356,6 @@ Wang name
 七月中 time
 一、兩個禮拜 time
 八月中 time
-9號 time
-11號 time
 6月 time
 CHANG name
 XIAO name
@@ -5416,7 +5413,7 @@ EMAIL contact
 小琉球 location
 老師 profession
 33歲 time
-嘉，嘉義 location
+嘉義 location
 這幾個月 time
 六號 time
 十二點 time
@@ -5458,7 +5455,6 @@ EMAIL contact
 十塊錢 money
 二十塊 money
 四百二十塊 money
-21顆 time
 首爾 location
 首爾護理之家 location
 釜山 location
@@ -5503,10 +5499,8 @@ EMAIL contact
 1.7 med_exam
 9.0 med_exam
 個管師 O
-六 time
 六千二 med_exam
 七千二 med_exam
-五 time
 十二 time
 九十 money
 八百七十二 med_exam
@@ -5536,7 +5530,6 @@ EMAIL contact
 一百八 med_exam
 四三零 ID
 四二三 ID
-一 time
 一三四 time
 一三 time
 一一五 med_exam
@@ -5558,7 +5551,6 @@ EMAIL contact
 五六七八九 time
 四五六七八九 time
 三百二 time
-二 time
 一萬 money
 兩千 money
 五千 money
@@ -5567,11 +5559,9 @@ EMAIL contact
 一千五 money
 一萬八 money
 九百 money
-九 time
 十一 time
 五六七八九十 time
 五一五 time
-七 time
 六十三 time
 六十 time
 兩萬 money
@@ -5586,7 +5576,6 @@ EMAIL contact
 九十七 med_exam
 三四 time
 二十 time
-兩 time
 九千七 med_exam
 一萬五 med_exam
 一萬零四百 med_exam
