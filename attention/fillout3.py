@@ -53,7 +53,7 @@ ckip_type_map = {
 ckip_dropped_words = set({'齁', '阿', '哈哈', '以', '恩恩'})
 def parse_nes(ckip_entity_words):
     nes = {}
-    for i, entity_words in enumerate(ckip_entity_words):
+    for entity_words in ckip_entity_words:
         for entity in entity_words:
             word, word_type = entity[3], entity[2]
             if word_type in ckip_type_map \
