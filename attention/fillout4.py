@@ -19,11 +19,11 @@ hidden_size = 256 * 4
 batch_size = 128 * 2
 
 model = AttentionSeq2seq(vocab_size, wordvec_size, hidden_size)
-model.load_params("medical2-40.pkl")
+model.load_params("medical2-80.pkl")
 
 # test_file = "../dataset/validation.txt"
 test_file = "../dataset/development_2.txt"
-fillout_file = "../output/aicup-20201119.tsv"
+fillout_file = "../output/aicup-output.tsv"
 
 question_size = 29
 answer_size = 29
@@ -80,7 +80,7 @@ def guess_type(question, correct):
 mark = ['|','/','-','\\']
 for article_id, article in enumerate(articles):
     start_position = 0
-    print("Recognize article %d, %s ..."%(article_id, article[:50]))
+    print("\r\nRecognize article %d, %s ..."%(article_id, article[:50]))
 
     sentences = re.split("：|，|。|？|；|！|\n", article)
     # for i, s in enumerate(sentences):
