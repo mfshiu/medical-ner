@@ -1,6 +1,6 @@
 article_id	start_position	end_position	entity_text	entity_type
 0	273	276	李醫生	name
-0	326	328	25	Unknown
+0	326	328	25	med_exam
 0	817	819	晚上	time
 0	1168	1172	7月21	time
 0	2200	2204	13號來	time
@@ -277,7 +277,7 @@ article_id	start_position	end_position	entity_text	entity_type
 14	137	139	三天	time
 14	242	246	38.7	med_exam
 14	250	253	387	med_exam
-14	379	380	7	Unknown
+14	379	380	7	med_exam
 14	384	389	68.7是	med_exam
 14	476	479	2個月	time
 14	655	657	8月	time
@@ -291,7 +291,7 @@ article_id	start_position	end_position	entity_text	entity_type
 14	1396	1398	9月	time
 14	1400	1404	9月20	time
 15	94	95	4	med_exam
-15	99	102	2.4	Unknown
+15	99	102	2.4	med_exam
 15	177	179	58	med_exam
 15	183	185	.4	med_exam
 15	632	634	前鎮	location
@@ -308,8 +308,8 @@ article_id	start_position	end_position	entity_text	entity_type
 16	324	328	5.02	med_exam
 16	336	341	前7.64	med_exam
 16	367	371	7.83	med_exam
-16	391	392	8	Unknown
-16	397	398	7	Unknown
+16	391	392	8	med_exam
+16	397	398	7	med_exam
 16	399	401	83	med_exam
 16	402	406	7.02	med_exam
 16	424	427	三個月	time
@@ -432,8 +432,8 @@ article_id	start_position	end_position	entity_text	entity_type
 29	215	217	一年	time
 29	224	226	一年	time
 29	229	232	這一年	time
-29	471	473	69	Unknown
-29	480	482	69	Unknown
+29	471	473	69	med_exam
+29	480	482	69	med_exam
 29	485	487	69	med_exam
 29	747	750	陳醫師	name
 29	1365	1368	552	med_exam
@@ -814,15 +814,15 @@ article_id	start_position	end_position	entity_text	entity_type
 50	721	725	36.9	med_exam
 50	729	733	36.9	med_exam
 50	1181	1184	個月底	time
-50	1209	1211	11	Unknown
-50	1224	1226	11	Unknown
+50	1209	1211	11	med_exam
+50	1224	1226	11	med_exam
 50	1290	1293	11號	time
 50	1320	1322	8號	time
 50	1455	1458	禮拜…	time
 50	1459	1462	禮拜五	time
 50	1463	1465	早上	time
 50	2008	2014	88821許	med_exam
-50	2028	2032	27.7	Unknown
+50	2028	2032	27.7	med_exam
 50	2813	2815	豆漿	location
 50	3201	3205	4個小時	time
 50	3286	3288	奇美	name
@@ -872,7 +872,7 @@ article_id	start_position	end_position	entity_text	entity_type
 52	195	199	3200	money
 52	203	207	3200	money
 52	262	266	10.7	med_exam
-52	289	290	8	Unknown
+52	289	290	8	med_exam
 52	294	296	10	med_exam
 52	297	298	7	med_exam
 52	526	529	林醫師	name
@@ -1059,7 +1059,7 @@ article_id	start_position	end_position	entity_text	entity_type
 62	5	9	0938	med_exam
 62	13	16	這個月	time
 62	50	53	這個月	time
-62	83	84	3	Unknown
+62	83	84	3	med_exam
 62	300	302	一年	time
 62	906	911	11月29	time
 62	915	918	禮拜五	time
