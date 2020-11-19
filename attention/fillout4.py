@@ -93,7 +93,7 @@ for article_id, article in enumerate(articles):
 
         guess_text = guess_type(x[[i]], t[[i]]) + "O"
         guess_chars = [c for c in guess_text]
-        print("[%d-%d] %s => %s" % (article_id, i, sentence, guess_text))
+        print("\r[%d-%d] %s => %s" % (article_id, i, sentence, guess_text), end="")
 
         name_entity = ""
         j = -1
@@ -104,11 +104,14 @@ for article_id, article in enumerate(articles):
                 if name_entity[0].lower() != c.lower(): # or name_entity[0] == c:
                     size = len(name_entity)
                     word = sentence[j - size: j]
-                    type_name = convert_type_to_name(name_entity[0])
-                    row = "{}\t{}\t{}\t{}\t{}\n".format(
-                        article_id, start_position + j - size, start_position + j, word, type_name)
-                    rows.append(row)
-                    print("[%d] %s" % (i, row), end="")
+                    skip = word.isdigit() and size == 1
+                    # skip = False
+                    if not skip:
+                        type_name = convert_type_to_name(name_entity[0])
+                        row = "{}\t{}\t{}\t{}\t{}\n".format(
+                            article_id, start_position + j - size, start_position + j, word, type_name)
+                        rows.append(row)
+                        print("\r[%d] %s" % (i, row))
                     if c != "O":
                         name_entity = c
                     else:
