@@ -88,6 +88,9 @@ for article_id, article in enumerate(articles):
     rows = []
     x, t = convert_to_word_id(sentences)
     for i, sentence in enumerate(sentences):
+        if not sentence:
+            continue
+
         guess_text = guess_type(x[[i]], t[[i]]) + "O"
         guess_chars = [c for c in guess_text]
         print("[%d-%d] %s => %s" % (article_id, i, sentence, guess_text))
