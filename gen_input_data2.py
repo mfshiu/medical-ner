@@ -47,7 +47,7 @@ def convert_type_to_name(t):
     if t in tes:
         return tes[t]
     else:
-        return "Unknown"
+        return "Unknown: " + t
 
 
 def CRFFormatData(trainingset, position, path):
