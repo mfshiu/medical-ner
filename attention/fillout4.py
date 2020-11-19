@@ -106,8 +106,8 @@ for article_id, article in enumerate(articles):
                 if name_entity[0].lower() != c.lower(): # or name_entity[0] == c:
                     size = len(name_entity)
                     word = sentence[j - size: j]
-                    skip = word.isdigit() and size == 1
-                    # skip = False
+                    # skip = word.isdigit() and size == 1
+                    skip = False
                     if not skip:
                         type_name = convert_type_to_name(name_entity[0])
                         row = "{}\t{}\t{}\t{}\t{}\n".format(
