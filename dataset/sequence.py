@@ -50,6 +50,10 @@ def load_data2(file_name='addition.txt', seed=1934):
     return (que_train, ans_train), (que_test, ans_test)
 
 
+question_size = 29
+answer_size = 30
+
+
 def load_data_without_test(file_name, shuffle=True):
     file_path = os.path.dirname(os.path.abspath(__file__)) + '/' + file_name
 
@@ -62,7 +66,7 @@ def load_data_without_test(file_name, shuffle=True):
     for line in open(file_path, 'r'):
         idx = line.find('_')
         questions.append(line[:idx])
-        answers.append(line[idx:-1].ljust(15))
+        answers.append(line[idx:-1].ljust(answer_size))
 
     # create vocab dict
     for i in range(len(questions)):
@@ -71,13 +75,16 @@ def load_data_without_test(file_name, shuffle=True):
         _update_vocab(a)
 
     # create numpy array
-    x = numpy.zeros((len(questions), len(questions[0])), dtype=numpy.int)
-    t = numpy.zeros((len(questions), len(answers[0])), dtype=numpy.int)
+    x = numpy.zeros((len(questions), question_size), dtype=numpy.int)
+    t = numpy.zeros((len(questions), answer_size), dtype=numpy.int)
 
     for i, sentence in enumerate(questions):
+        print("\r[%d] %s"%(i, sentence), end="")
         x[i] = [char_to_id[c] for c in list(sentence)]
     for i, sentence in enumerate(answers):
+        print("\r[%d] %s"%(i, sentence), end="")
         t[i] = [char_to_id[c] for c in list(sentence)]
+    print()
 
     if shuffle:
         indices = numpy.arange(len(x))

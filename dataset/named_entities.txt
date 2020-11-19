@@ -5511,3 +5511,7 @@ EMAIL contact
 小叔 family
 中藥 profession
 超音波 O
+副院長 O
+奇美 organization
+陽明醫院 organization
+陽明 organization

@@ -10,6 +10,26 @@ from common import util
 NAME_ENTITY_MARK = "@N^E_M@"
 
 
+def loadInputFile(file_path):
+    trainingset = list()  # store trainingset [content,content,...]
+    position = list()  # store position [article_id, start_pos, end_pos, entity_text, entity_type, ...]
+    mentions = dict()  # store mentions[mention] = Type
+    with open(file_path, 'r', encoding='utf8') as f:
+        file_text = f.read().encode('utf-8').decode('utf-8-sig')
+    datas = file_text.split('\n\n--------------------\n\n')[:-1]
+    for data in datas:
+        data = data.split('\n')
+        content = data[0]
+        trainingset.append(content)
+        annotations = data[1:]
+        for annot in annotations[1:]:
+            annot = annot.split('\t')  # annot= article_id, start_pos, end_pos, entity_text, entity_type
+            position.extend(annot)
+            mentions[annot[3]] = annot[4]
+
+    return trainingset, position, mentions
+
+
 def loadInputFile2(file_path):
     training_set = list()  # store trainingset [content,content,...]
     named_entities = list()  # store position [article_id, start_pos, end_pos, entity_text, entity_type, ...]
