@@ -77,6 +77,7 @@ def guess_type(question, correct):
 
 
 # Recognize words in each article
+mark = ['|','/','-','\\']
 for article_id, article in enumerate(articles):
     start_position = 0
     print("Recognize article %d, %s ..."%(article_id, article[:50]))
@@ -93,7 +94,8 @@ for article_id, article in enumerate(articles):
 
         guess_text = guess_type(x[[i]], t[[i]]) + "O"
         guess_chars = [c for c in guess_text]
-        print("\r[%d-%d] %s => %s" % (article_id, i, sentence, guess_text), end="")
+        print("\r" + mark[i%4], end="")
+        # print("[%d-%d] %s => %s" % (article_id, i, sentence, guess_text), end="")
 
         name_entity = ""
         j = -1
@@ -111,7 +113,7 @@ for article_id, article in enumerate(articles):
                         row = "{}\t{}\t{}\t{}\t{}\n".format(
                             article_id, start_position + j - size, start_position + j, word, type_name)
                         rows.append(row)
-                        print("\r[%d] %s%s" % (i, row, " "*100))
+                        print("\r[%d] %s%s" % (i, row, " "*100), end="")
                     if c != "O":
                         name_entity = c
                     else:
