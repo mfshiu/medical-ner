@@ -44,8 +44,8 @@ def convert_name_to_type(et):
 
 
 def convert_type_to_name(t):
-    if t in tes:
-        return tes[t]
+    if t.upper() in tes:
+        return tes[t.upper()]
     else:
         return "Unknown: " + t
 
