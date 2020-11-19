@@ -5,6 +5,9 @@ import os
 from common.np import *
 
 
+delimiters = "：，。？；！.,;!?"
+
+
 def construct_dictionary(word_to_weight):
     length_word_weight = {}
 

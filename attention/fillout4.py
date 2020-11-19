@@ -10,20 +10,10 @@ from attention_seq2seq import AttentionSeq2seq
 from gen_input_data2 import convert_type_to_name
 import re
 
-# if GPU:
-#     os.environ["CUDA_VISIBLE_DEVICES"] = str(GPU_Device)
-
 x_train, t_train = sequence.load_data_without_test('train3_70000.txt', shuffle=False)
 char_to_id, id_to_char = sequence.get_vocab()
 vocab_size = len(char_to_id)
 
-# x_test, t_test = sequence.load_data_without_test('test-sample.txt', shuffle=False)
-#
-# # 反轉輸入內容
-# x_test = x_test[:, ::-1]
-
-# 設定超參數
-# vocab_size = len(char_to_id)
 wordvec_size = 16
 hidden_size = 256 * 4
 batch_size = 128 * 2
@@ -31,9 +21,9 @@ batch_size = 128 * 2
 model = AttentionSeq2seq(vocab_size, wordvec_size, hidden_size)
 model.load_params("medical2-40.pkl")
 
-test_file = "../dataset/validation.txt"
-# test_file = "../dataset/development_2.txt"
-fillout_file = "../output/aicup-20201119a.tsv"
+# test_file = "../dataset/validation.txt"
+test_file = "../dataset/development_2.txt"
+fillout_file = "../output/aicup-20201119.tsv"
 
 question_size = 29
 answer_size = 29
@@ -98,33 +88,32 @@ for article_id, article in enumerate(articles):
     rows = []
     x, t = convert_to_word_id(sentences)
     for i, sentence in enumerate(sentences):
-        guess_text = guess_type(x[[i]], t[[i]])
+        guess_text = guess_type(x[[i]], t[[i]]) + "O"
         guess_chars = [c for c in guess_text]
         print("[%d-%d] %s => %s" % (article_id, i, sentence, guess_text))
 
-        j = 0
-        c = guess_chars.pop(0)
-        while c:
-            name_entity = ""
-            while c != "O":
-                name_entity += c
-                if not guess_chars:
-                    break
-                c = guess_chars.pop(0)
-            if name_entity:
-                size = len(name_entity)
-                word = sentence[j: j + size]
-                type_name = convert_type_to_name(name_entity[0])
-                row = "{}\t{}\t{}\t{}\t{}\n".format(
-                    article_id, start_position + j, start_position + j + size, word, type_name)
-                rows.append(row)
-                print("[%d] %s" % (i, row), end="")
-                j += size
-
-            if not guess_chars:
-                break
+        name_entity = ""
+        j = -1
+        while guess_chars:
             c = guess_chars.pop(0)
             j += 1
+            if name_entity:
+                if name_entity[0].lower() != c.lower() or name_entity[0] == c:
+                    size = len(name_entity)
+                    word = sentence[j - size: j]
+                    type_name = convert_type_to_name(name_entity[0])
+                    row = "{}\t{}\t{}\t{}\t{}\n".format(
+                        article_id, start_position + j - size, start_position + j, word, type_name)
+                    rows.append(row)
+                    print("[%d] %s" % (i, row), end="")
+                    if c != "O":
+                        name_entity = c
+                    else:
+                        name_entity = ""
+                else:
+                    name_entity += c
+            elif c != "O":
+                name_entity = c
 
         start_position += len(sentence) + 1
 

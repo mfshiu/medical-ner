@@ -26,7 +26,10 @@ ets = {
     "unique_treatment": "U",
     "med_exam": "X",
 }
-def convert_entity_type(et):
+tes = dict([(ets[k], k) for k in ets])
+
+
+def convert_name_to_type(et):
     if len(et) > 2:
         name = et[2:]
         if name in ets:
@@ -38,6 +41,13 @@ def convert_entity_type(et):
             return empty_sign
     else:
         return empty_sign
+
+
+def convert_type_to_name(t):
+    if t in tes:
+        return tes[t]
+    else:
+        return "Unknown"
 
 
 def CRFFormatData(trainingset, position, path):
@@ -194,7 +204,7 @@ def transfer(output_path):
     with open(output_path, "r") as fp:
         rows = fp.readlines()
 
-    delimiters = set([c for c in "：，。？；！.,;!?"])
+    delimiters = set([c for c in util.delimiters])
     questions, answers, output_lines = [], [], []
     q, a = "", ""
     for row in rows:
@@ -207,7 +217,7 @@ def transfer(output_path):
                     q, a = "", ""
             else:
                 q += row[0]
-                a += convert_entity_type(row[2:].strip())
+                a += convert_name_to_type(row[2:].strip())
 
     with open(output_path, "w") as fp:
         fp.writelines(output_lines)
@@ -222,7 +232,6 @@ if __name__ == '__main__':
     input_path = sys.argv[1]
     output_path = sys.argv[2]
 
-    default_name_entities = dict([(a, 'time') for a in util.get_time_entities()])
     trainingset, position, mentions = loadInputFile(input_path)
     CRFFormatData(trainingset, position, output_path)
     transfer(output_path)
