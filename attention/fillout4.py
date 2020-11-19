@@ -21,8 +21,8 @@ batch_size = 128 * 2
 model = AttentionSeq2seq(vocab_size, wordvec_size, hidden_size)
 model.load_params("medical2-40.pkl")
 
-# test_file = "../dataset/validation.txt"
-test_file = "../dataset/development_2.txt"
+test_file = "../dataset/validation.txt"
+# test_file = "../dataset/development_2.txt"
 fillout_file = "../output/aicup-20201119.tsv"
 
 question_size = 29
@@ -101,7 +101,7 @@ for article_id, article in enumerate(articles):
             c = guess_chars.pop(0)
             j += 1
             if name_entity:
-                if name_entity[0].lower() != c.lower() or name_entity[0] == c:
+                if name_entity[0].lower() != c.lower(): # or name_entity[0] == c:
                     size = len(name_entity)
                     word = sentence[j - size: j]
                     type_name = convert_type_to_name(name_entity[0])
