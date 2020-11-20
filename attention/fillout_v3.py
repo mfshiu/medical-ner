@@ -21,9 +21,9 @@ batch_size = 128 * 2
 model = AttentionSeq2seq(vocab_size, wordvec_size, hidden_size)
 model.load_params("medical_v3-20.pkl")
 
-test_file = "../dataset/validation.txt"
-# test_file = "../dataset/development_2.txt"
-fillout_file = "../output/aicup-output-v3.tsv"
+# test_file = "../dataset/validation.txt"
+test_file = "../dataset/development_2.txt"
+fillout_file = "../dataset/aicup-output-v3-20.tsv"
 
 question_size = 29
 answer_size = 29
