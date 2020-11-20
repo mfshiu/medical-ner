@@ -75,7 +75,8 @@ def loadInputFile(file_path):
 
 
 def prepare_data(trainingset, mentions):
-    words = segment_data(trainingset, mentions)
+    name_entities = gen_default_name_entities(mentions)
+    words = segment_data(trainingset, name_entities, mentions)
     trains = []
     for word in words:
         if word in name_entities:
@@ -92,8 +93,7 @@ def prepare_data(trainingset, mentions):
     return train_data
 
 
-def segment_data(articles, mentions=None):
-    name_entities = gen_default_name_entities(mentions)
+def segment_data(articles, name_entities, mentions=None):
     coerce_words = dict([(k, 1) for k in name_entities])
     print("Segment all articles...", end=' ')
     ws = WS(root_dir + "/ckipdata")
