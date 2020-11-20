@@ -8,7 +8,7 @@ from common.config import Device as GPU_Device
 from dataset import sequence
 from attention_seq2seq import AttentionSeq2seq
 from gen_input_data2 import convert_type_to_name
-from gen_input_data3 import segment_data
+from gen_input_data3 import segment_data, gen_default_name_entities
 
 x_train, t_train = sequence.load_data_without_test('train_v3.txt', shuffle=False)
 char_to_id, id_to_char = sequence.get_vocab()
@@ -29,6 +29,8 @@ question_size = 29
 answer_size = 29
 answer_none = "_O".ljust(answer_size)
 window_size = 5
+
+default_name_entities = gen_default_name_entities()
 
 # Read all articles
 print("Read all articles...", end=' ')
@@ -69,14 +71,16 @@ def convert_to_word_id(sentences):
 
 def gen_sentences(article):
     words = segment_data([article])
-    cnt = len(words) - len(words) // window_size * window_size
+    cnt = window_size - len(words) % window_size
+    if cnt == window_size:
+        cnt = 0
     words.extend(["無" for i in range(cnt)])
 
     sentences = []
     for i in range(0, len(words), window_size):
         sentences.append("".join(words[i: i+5]))
 
-    return sentence
+    return sentences
 
 
 def guess_type(question, correct):
@@ -116,10 +120,13 @@ for article_id, article in enumerate(articles):
                 if name_entity[0].lower() != c.lower(): # or name_entity[0] == c:
                     size = len(name_entity)
                     word = sentence[j - size: j]
-                    skip = word.isdigit() and size == 1
+                    skip = size == 1 # word.isdigit() and size == 1
                     # skip = False
                     if not skip:
-                        type_name = convert_type_to_name(name_entity[0])
+                        if word in default_name_entities:
+                            type_name = default_name_entities[word]
+                        else:
+                            type_name = convert_type_to_name(name_entity[0])
                         row = "{}\t{}\t{}\t{}\t{}\n".format(
                             article_id, start_position + j - size, start_position + j, word, type_name)
                         rows.append(row)
