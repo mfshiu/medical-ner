@@ -75,7 +75,8 @@ def get_time_entities():
     small_num = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "兩"]
     # Small numbers
     for u in units:
-        for n in small_num:
+        for i, n in enumerate(small_num):
+            time_entities.append("{}{}".format(i+1, u))
             time_entities.append("{}{}".format(n, u))
     # 1 - 60 numbers
     for u in units[:5]:
@@ -92,6 +93,14 @@ def get_time_entities():
         time_entities.append("{}{}".format(w, week_days[6]))
     time_entities.append("{}{}".format(week_names[1], week_days[6]))
     time_entities.append("{}{}".format(week_names[2], week_days[6]))
+
+    time_entities.append("今天")
+    time_entities.append("明天")
+    time_entities.append("後天")
+    time_entities.append("大後天")
+    time_entities.append("昨天")
+    time_entities.append("前天")
+    time_entities.append("大前天")
 
     return time_entities
 

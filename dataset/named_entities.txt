@@ -564,6 +564,8 @@
 一半 none
 一個 none
 一樣 none
+一跳 none
+一直 none
 這個 none
 第一 none
 IG contact
@@ -572,3 +574,12 @@ GOOGLE profession
 一點點 none
 陽明 location
 台大 location
+黃醫師 name
+醫師 none
+顆 none
+： none
+， none
+。 none
+？ none
+； none
+！ none

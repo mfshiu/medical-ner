@@ -26,7 +26,6 @@ ets = {
     "unique_treatment": "U",
     "med_exam": "X",
 }
-# tes = dict([(ets[k], k) for k in ets])
 root_dir = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -42,13 +41,6 @@ def convert_name_to_type(et):
             return empty_sign
     else:
         return empty_sign
-
-
-# def convert_type_to_name(t):
-#     if t.upper() in tes:
-#         return tes[t.upper()]
-#     else:
-#         return "Unknown: " + t
 
 
 def gen_default_name_entities(mentions=None):
@@ -105,10 +97,10 @@ def segment_data(articles, mentions=None):
     coerce_words = dict([(k, 1) for k in name_entities])
     print("Segment all articles...", end=' ')
     ws = WS(root_dir + "/ckipdata")
-    delimiters = set([char for char in "：，。？；！"])
+    # delimiters = set([char for char in "：，。？；！"])
     atricle_words = ws(articles,
-                       sentence_segmentation=True,
-                       segment_delimiter_set=delimiters,
+                       # sentence_segmentation=True,
+                       # segment_delimiter_set=delimiters,
                        coerce_dictionary=util.construct_dictionary(coerce_words))
     del ws
     words = []

@@ -141,7 +141,7 @@ for article_id, article in enumerate(articles):
             elif c.upper() != "O":
                 name_entity = c
 
-        start_position += len(sentence) + 1
+        start_position += len(sentence) # + 1
 
     with open(fillout_file, 'a') as fp:
         fp.writelines(rows)
