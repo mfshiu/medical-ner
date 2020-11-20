@@ -19,7 +19,7 @@ def _update_vocab(txt):
             id_to_char[tmp_id] = char
 
 
-def load_data(file_name='addition.txt', seed=1984):
+def load_data(file_name, seed=1984):
     que, ans = load_data_without_test(file_name, seed)
 
     # 10% for validation set

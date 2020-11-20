@@ -42,47 +42,6 @@ def gen_word_to_weight(addition_dic={}):
     return word_to_weight
 
 
-# def get_conunt_entities():
-#     name_entities = []
-#     mon1 = [i for i in range(1,13)]
-#     units = ["個", "顆", "次", "下", "串", "包", "張", "袋", "本", "罐", "箱", "項"
-#         , "項", "項", "項", "項", "項", "項", "項", "項", "項"]
-#     days = [31 ,30, 29 ,30 ,31 ,30 ,31 ,31 ,30 ,31 ,30 ,31]
-#     day_name = ['', '日', '號']
-#     word_to_weight = {}
-#
-#     for mm in [mon1, mon2]:
-#         for i, m in enumerate(mm):
-#             for d in range(days[i]):
-#                 for dn in day_name:
-#                     time_entities.append("{}月{}{}".format(m, d+1, dn))
-#             for d in mon2[:10]:
-#                 for dn in day_name:
-#                     time_entities.append("{}月{}{}".format(m, d, dn))
-#             for d in mon2[:9]:
-#                 for dn in day_name:
-#                     time_entities.append("{}月十{}{}".format(m, d, dn))
-#                     time_entities.append("{}月二十{}{}".format(m, d, dn))
-#             for dn in day_name:
-#                 time_entities.append("{}月三十{}".format(m, dn))
-#                 time_entities.append("{}月三十一{}".format(m, dn))
-#
-#     day_name = ['日', '號', '天']
-#     for d in range(31):
-#         for dn in day_name:
-#             word_to_weight["{}{}".format(d + 1, dn)] = 1
-#
-#     units = ['分', '分鐘']  #, '個', '次']
-#     num = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "兩"]
-#     for u in units:
-#         for m in range(60):
-#             time_entities.append("{}{}".format(m + 1, u))
-#         for m in num:
-#             time_entities.append("{}{}".format(m, u))
-#
-#     return time_entities
-
-
 def get_time_entities():
     time_entities = []
     mon1 = [i for i in range(1,13)]
@@ -112,13 +71,27 @@ def get_time_entities():
         for dn in day_name:
             word_to_weight["{}{}".format(d + 1, dn)] = 1
 
-    units = ['分', '分鐘']  #, '個', '次']
-    num = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "兩"]
+    units = ['秒', '秒鐘', '分', '分鐘', '小時', '個禮拜', '個月', '年']
+    small_num = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "兩"]
+    # Small numbers
     for u in units:
-        for m in range(60):
-            time_entities.append("{}{}".format(m + 1, u))
-        for m in num:
-            time_entities.append("{}{}".format(m, u))
+        for n in small_num:
+            time_entities.append("{}{}".format(n, u))
+    # 1 - 60 numbers
+    for u in units[:5]:
+        for i in range(60):
+            time_entities.append("{}{}".format(i + 1, u))
+
+    # Weeks
+    week_names = ['週', '星期', '禮拜']
+    week_days = ["一", "二", "三", "四", "五", "六", "日", "天"]
+    for w in week_names:
+        for d in range(6):
+            time_entities.append("{}{}".format(w, d+1))
+            time_entities.append("{}{}".format(w, week_days[d]))
+        time_entities.append("{}{}".format(w, week_days[6]))
+    time_entities.append("{}{}".format(week_names[1], week_days[6]))
+    time_entities.append("{}{}".format(week_names[2], week_days[6]))
 
     return time_entities
 
