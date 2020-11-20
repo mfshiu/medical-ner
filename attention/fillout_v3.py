@@ -127,9 +127,10 @@ for article_id, article in enumerate(articles):
                             type_name = default_name_entities[word]
                         else:
                             type_name = convert_type_to_name(name_entity[0])
-                        row = "{}\t{}\t{}\t{}\t{}\n".format(
-                            article_id, start_position + j - size, start_position + j, word, type_name)
-                        rows.append(row)
+                        if "none" != type_name:
+                            row = "{}\t{}\t{}\t{}\t{}\n".format(
+                                article_id, start_position + j - size, start_position + j, word, type_name)
+                            rows.append(row)
                         print("\r[%d] %s" % (i, row), end="")
                     if c.upper() != "O":
                         name_entity = c

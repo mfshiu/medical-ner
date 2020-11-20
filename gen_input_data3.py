@@ -18,6 +18,7 @@ ets = {
     "location": "L",
     "money": "M",
     "name": "N",
+    "none": "O",
     "organization": "R",
     "profession": "P",
     "special_skills": "S",
@@ -25,7 +26,7 @@ ets = {
     "unique_treatment": "U",
     "med_exam": "X",
 }
-tes = dict([(ets[k], k) for k in ets])
+# tes = dict([(ets[k], k) for k in ets])
 root_dir = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -43,11 +44,11 @@ def convert_name_to_type(et):
         return empty_sign
 
 
-def convert_type_to_name(t):
-    if t.upper() in tes:
-        return tes[t.upper()]
-    else:
-        return "Unknown: " + t
+# def convert_type_to_name(t):
+#     if t.upper() in tes:
+#         return tes[t.upper()]
+#     else:
+#         return "Unknown: " + t
 
 
 def gen_default_name_entities(mentions=None):
