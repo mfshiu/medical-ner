@@ -131,7 +131,7 @@ for article_id, article in enumerate(articles):
                             row = "{}\t{}\t{}\t{}\t{}\n".format(
                                 article_id, start_position + j - size, start_position + j, word, type_name)
                             rows.append(row)
-                        print("\r[%d] %s" % (i, row), end="")
+                            print("\r[%d] %s" % (i, row), end="")
                     if c.upper() != "O":
                         name_entity = c
                     else:
