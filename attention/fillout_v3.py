@@ -10,16 +10,16 @@ from attention_seq2seq import AttentionSeq2seq
 from gen_input_data2 import convert_type_to_name
 from gen_input_data3 import segment_data
 
-x_train, t_train = sequence.load_data_without_test('train3_70000.txt', shuffle=False)
+x_train, t_train = sequence.load_data_without_test('train_v3.txt', shuffle=False)
 char_to_id, id_to_char = sequence.get_vocab()
 vocab_size = len(char_to_id)
 
 wordvec_size = 16
-hidden_size = 256 * 4
+hidden_size = 256 * 2
 batch_size = 128 * 2
 
 model = AttentionSeq2seq(vocab_size, wordvec_size, hidden_size)
-model.load_params("medical2-80.pkl")
+model.load_params("medical_v3-20.pkl")
 
 test_file = "../dataset/validation.txt"
 # test_file = "../dataset/development_2.txt"
@@ -123,14 +123,14 @@ for article_id, article in enumerate(articles):
                         row = "{}\t{}\t{}\t{}\t{}\n".format(
                             article_id, start_position + j - size, start_position + j, word, type_name)
                         rows.append(row)
-                        print("\r[%d] %s%s" % (i, row, " "*100), end="")
-                    if c != "O":
+                        print("\r[%d] %s" % (i, row), end="")
+                    if c.upper() != "O":
                         name_entity = c
                     else:
                         name_entity = ""
                 else:
                     name_entity += c
-            elif c != "O":
+            elif c.upper() != "O":
                 name_entity = c
 
         start_position += len(sentence) + 1
