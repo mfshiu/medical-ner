@@ -1,3 +1,4 @@
+import os
 import sys
 from common import util
 from ckiptagger import construct_dictionary, WS
@@ -25,6 +26,7 @@ ets = {
     "med_exam": "X",
 }
 tes = dict([(ets[k], k) for k in ets])
+root_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 def convert_name_to_type(et):
@@ -46,6 +48,17 @@ def convert_type_to_name(t):
         return tes[t.upper()]
     else:
         return "Unknown: " + t
+
+
+def gen_default_name_entities(mentions=None):
+    file_path = root_dir + '/dataset/named_entities.txt'
+    load_nes = util.load_name_entities(file_path)
+    name_entities = dict([(a, 'time') for a in util.get_time_entities()])
+    name_entities.update(load_nes)
+    if mentions:
+        name_entities.update(mentions)
+
+    return name_entities
 
 
 def loadInputFile(file_path):
@@ -87,14 +100,10 @@ def prepare_data(trainingset, mentions):
 
 
 def segment_data(articles, mentions=None):
-    load_nes = util.load_name_entities("dataset/named_entities.txt")
-    name_entities = dict([(a, 'time') for a in util.get_time_entities()])
-    name_entities.update(load_nes)
-    if mentions:
-        name_entities.update(mentions)
+    name_entities = gen_default_name_entities(mentions)
     coerce_words = dict([(k, 1) for k in name_entities])
     print("Segment all articles...", end=' ')
-    ws = WS("./ckipdata")
+    ws = WS(root_dir + "/ckipdata")
     delimiters = set([char for char in "：，。？；！"])
     atricle_words = ws(articles,
                        sentence_segmentation=True,
