@@ -106,7 +106,7 @@ def segment_data(articles, mentions=None):
     words = []
     for sublist in atricle_words:
         words.extend(sublist)
-    words = list(filter(lambda w: w not in delimiters, words))
+    # words = list(filter(lambda w: w not in delimiters, words))
     print("done.")
     print("Total %d words."%(len(words),))
 
