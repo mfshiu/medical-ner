@@ -49,7 +49,7 @@ with open(fillout_file, "w") as fp:
 def convert_to_word_id(sentences):
     questions = []
     for q in sentences:
-        q = "".join(q)
+        q = " ".join(q)
         q = q.strip()[:question_size]
         questions.append(q.ljust(question_size)[::-1])
 

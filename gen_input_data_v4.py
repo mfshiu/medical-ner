@@ -89,44 +89,51 @@ def prepare_data(articles, positions, mentions):
     recommend_dict = load_recommend_dictionary()
     coerce_dict = load_coerce_dictionary()
     for article_id, article in enumerate(articles):
+        position = positions[article_id]
         custom_dict = mentions[article_id]
         custom_dict.update(coerce_dict)
+        print("[%d/%d] "%(article_id, len(articles)), end="")
         words = segment_data([article], recommend_dict, custom_dict)
 
         known_dict = {}
         known_dict.update(recommend_dict)
-        known_dict.update(custom_dict)
+        known_dict.update(coerce_dict)
         types = []
+        word_pos = 0
+        pos = position.pop(0)
         for w in words:
-            if w.lower() in known_dict:
+            if str(word_pos) == pos[1]:
+                types.append(ets[pos[4]])
+                if position:
+                    pos = position.pop(0)
+            elif w.lower() in known_dict:
                 types.append(ets[known_dict[w.lower()]])
             else:
                 types.append("O")
+            word_pos += len(w)
 
         for i in range(0, len(words)-3):
-            train_data.append(("".join([x for x in words[i: i+3]]),
+            train_data.append((" ".join([x for x in words[i: i+3]]),
                                "".join([x for x in types[i: i+3]])))
 
     return train_data
 
 
+ws = WS("./ckipdata")
 def segment_data(articles, recommend_dict, coerce_dict):
     recommend_words = dict([(k, 1) for k in recommend_dict])
     coerce_words = dict([(k, 1) for k in coerce_dict])
-    print("Segment all articles...", end=' ')
-    ws = WS("./ckipdata")
+    print("Segment: %s..."%(articles[0][:50]))
     delimiters = set([char for char in "：，。？；！"])
     atricle_words = ws(articles,
                        sentence_segmentation=True,
                        segment_delimiter_set=delimiters,
                        recommend_dictionary=util.construct_dictionary(recommend_words),
                        coerce_dictionary=util.construct_dictionary(coerce_words))
-    del ws
     words = []
     for sublist in atricle_words:
         words.extend(sublist)
-    print("done.")
-    print("Total %d words."%(len(words),))
+    print("Total %d words: %s｜..."%(len(words), "｜".join(words[:20])))
 
     return words
 
