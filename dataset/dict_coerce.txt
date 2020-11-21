@@ -1,8 +1,2 @@
-GOOGLE profession
+google profession
 急診 profession
-： none
-， none
-。 none
-？ none
-； none
-！ none

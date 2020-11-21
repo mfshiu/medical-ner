@@ -46,16 +46,11 @@ global _time_entities
 _time_entities = None
 
 def get_time_entities():
-    global _time_entities
-    if _time_entities:
-        return _time_entities
-
     time_entities = []
     mon1 = [i for i in range(1,13)]
     mon2 = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"]
     days = [31 ,30, 29 ,30 ,31 ,30 ,31 ,31 ,30 ,31 ,30 ,31]
-    day_name = ['', '日', '號']
-    word_to_weight = {}
+    day_name = ['日', '號']
 
     for mm in [mon1, mon2]:
         for i, m in enumerate(mm):
@@ -73,12 +68,7 @@ def get_time_entities():
                 time_entities.append("{}月三十{}".format(m, dn))
                 time_entities.append("{}月三十一{}".format(m, dn))
 
-    day_name = ['日', '號', '天']
-    for d in range(31):
-        for dn in day_name:
-            word_to_weight["{}{}".format(d + 1, dn)] = 1
-
-    units = ['秒', '秒鐘', '分', '分鐘', '小時', '個禮拜', '個月', '年']
+    units = ['秒', '秒鐘', '分鐘', '小時', '個鐘頭', '個禮拜', '個月', '年']
     small_num = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "兩"]
     # Small numbers
     for u in units:
@@ -98,9 +88,13 @@ def get_time_entities():
             time_entities.append("{}{}".format(w, d+1))
             time_entities.append("{}{}".format(w, week_days[d]))
         time_entities.append("{}{}".format(w, week_days[6]))
-    time_entities.append("{}{}".format(week_names[1], week_days[6]))
-    time_entities.append("{}{}".format(week_names[2], week_days[6]))
+    time_entities.append("{}{}".format(week_names[1], week_days[7]))
+    time_entities.append("{}{}".format(week_names[2], week_days[7]))
+    time_entities.append("下週末")
+    time_entities.append("上週末")
+    time_entities.append("週末")
 
+    # Relates dates
     time_entities.append("今天")
     time_entities.append("明天")
     time_entities.append("後天")
@@ -109,8 +103,30 @@ def get_time_entities():
     time_entities.append("前天")
     time_entities.append("大前天")
 
-    _time_entities = time_entities
-    return _time_entities
+    time_entities.append("這禮拜")
+    time_entities.append("這一週")
+    time_entities.append("這週")
+    time_entities.append("本週")
+    time_entities.append("下週")
+    time_entities.append("上週")
+
+    time_entities.append("這個月")
+    time_entities.append("這月")
+    time_entities.append("本月")
+    time_entities.append("下個月")
+    time_entities.append("下月")
+    time_entities.append("下下個月")
+    time_entities.append("上個月")
+    time_entities.append("上月")
+    time_entities.append("上上個月")
+
+    time_entities.append("今年")
+    time_entities.append("明年")
+    time_entities.append("後年")
+    time_entities.append("去年")
+    time_entities.append("前年")
+
+    return time_entities
 
 
 def load_dictionary(file_path):

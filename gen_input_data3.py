@@ -95,7 +95,7 @@ def loadInputFile(file_path):
 
 def prepare_data(trainingset, mentions):
     custom_dict = load_recommend_dictionary(mentions)
-    coerce_dict = dict([(k, 1) for k in load_coerce_dictionary()])
+    coerce_dict = load_coerce_dictionary()
     custom_dict.update(coerce_dict)
     words = segment_data(trainingset, mentions)
     trains = []
