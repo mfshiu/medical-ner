@@ -246,11 +246,6 @@
 觀音 location
 新屋 location
 復興 location
-中 location
-東 location
-南 location
-西 location
-北 location
 北屯 location
 西屯 location
 南屯 location
@@ -559,6 +554,7 @@
 東引 location
 櫻木 name
 一下 none
+一次 none
 一定 none
 一些 none
 一半 none
@@ -566,6 +562,7 @@
 一樣 none
 一跳 none
 一直 none
+一陣 none
 這個 none
 第一 none
 IG contact
@@ -574,6 +571,7 @@ GOOGLE profession
 一點點 none
 陽明 location
 台大 location
+慶鴻 location
 黃醫師 name
 醫師 none
 顆 none

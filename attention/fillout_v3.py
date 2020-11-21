@@ -15,15 +15,15 @@ char_to_id, id_to_char = sequence.get_vocab()
 vocab_size = len(char_to_id)
 
 wordvec_size = 16
-hidden_size = 256 * 2
+hidden_size = 256 * 4
 batch_size = 128 * 2
 
 model = AttentionSeq2seq(vocab_size, wordvec_size, hidden_size)
-model.load_params("medical_v3-20.pkl")
+model.load_params("medical_v3-40.pkl")
 
 # test_file = "../dataset/validation.txt"
 test_file = "../dataset/development_2.txt"
-fillout_file = "../dataset/aicup-output-v3-20.tsv"
+fillout_file = "../dataset/aicup-output-v3-40.tsv"
 
 question_size = 29
 answer_size = 29
@@ -70,7 +70,7 @@ def convert_to_word_id(sentences):
 
 
 def gen_sentences(article):
-    words = segment_data([article])
+    words = segment_data([article], name_entities = gen_default_name_entities())
     cnt = window_size - len(words) % window_size
     if cnt == window_size:
         cnt = 0
