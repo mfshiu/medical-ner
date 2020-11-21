@@ -43,15 +43,34 @@ def convert_name_to_type(et):
         return empty_sign
 
 
-def gen_default_name_entities(mentions=None):
-    file_path = root_dir + '/dataset/named_entities.txt'
-    load_nes = util.load_name_entities(file_path)
-    name_entities = dict([(a, 'time') for a in util.get_time_entities()])
-    name_entities.update(load_nes)
-    if mentions:
-        name_entities.update(mentions)
+def load_coerce_dictionary(custom_dict=None):
+    file_path = root_dir + '/dataset/dict_coerce.txt'
+    coerce_dict = util.load_dictionary(file_path)
+    if custom_dict:
+        coerce_dict.update(custom_dict)
 
-    return name_entities
+    return coerce_dict
+
+
+global _recommend_dict
+_recommend_dict = None
+
+def load_recommend_dictionary(custom_dict=None):
+    global _recommend_dict
+
+    if _recommend_dict:
+        return _recommend_dict
+
+    file_path = root_dir + '/dataset/dict_recommend.txt'
+    _recommend_dict = util.load_dictionary(file_path)
+
+    time_dict = dict([(a, 'time') for a in util.get_time_entities()])
+    _recommend_dict.update(time_dict)
+
+    if custom_dict:
+        _recommend_dict.update(custom_dict)
+
+    return _recommend_dict
 
 
 def loadInputFile(file_path):
@@ -75,12 +94,14 @@ def loadInputFile(file_path):
 
 
 def prepare_data(trainingset, mentions):
-    name_entities = gen_default_name_entities(mentions)
-    words = segment_data(trainingset, name_entities, mentions)
+    custom_dict = load_recommend_dictionary(mentions)
+    coerce_dict = dict([(k, 1) for k in load_coerce_dictionary()])
+    custom_dict.update(coerce_dict)
+    words = segment_data(trainingset, mentions)
     trains = []
     for word in words:
-        if word in name_entities:
-            entity_type = ets[name_entities[word]]
+        if word in custom_dict:
+            entity_type = ets[custom_dict[word]]
         else:
             entity_type = "O"
         trains.append((word, (entity_type * len(word)).capitalize()))
@@ -93,14 +114,16 @@ def prepare_data(trainingset, mentions):
     return train_data
 
 
-def segment_data(articles, name_entities, mentions=None):
-    coerce_words = dict([(k, 1) for k in name_entities])
+def segment_data(articles, mentions=None):
+    recommend_words = dict([(k, 1) for k in load_recommend_dictionary(mentions)])
+    coerce_words = dict([(k, 1) for k in load_coerce_dictionary()])
     print("Segment all articles...", end=' ')
     ws = WS(root_dir + "/ckipdata")
     # delimiters = set([char for char in "：，。？；！"])
     atricle_words = ws(articles,
                        # sentence_segmentation=True,
                        # segment_delimiter_set=delimiters,
+                       recommend_dictionary=util.construct_dictionary(recommend_words),
                        coerce_dictionary=util.construct_dictionary(coerce_words))
     del ws
     words = []

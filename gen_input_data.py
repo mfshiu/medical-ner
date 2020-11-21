@@ -73,7 +73,7 @@ if __name__ == '__main__':
 
     print("Segmenting...", end=' ')
     ws = WS("./ckipdata")
-    load_nes = util.load_name_entities("dataset/named_entities.txt")
+    load_nes = util.load_dictionary("dataset/named_entities.txt")
     default_name_entities.update(load_nes)
     coerce_words = dict([(k, 1) for k in load_nes])
     coerce_words.update({NAME_ENTITY_MARK: 1})

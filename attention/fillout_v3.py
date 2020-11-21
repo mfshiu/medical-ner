@@ -8,7 +8,7 @@ from common.config import Device as GPU_Device
 from dataset import sequence
 from attention_seq2seq import AttentionSeq2seq
 from gen_input_data2 import convert_type_to_name
-from gen_input_data3 import segment_data, gen_default_name_entities
+from gen_input_data3 import segment_data, load_recommend_dictionary
 
 x_train, t_train = sequence.load_data_without_test('train_v3.txt', shuffle=False)
 char_to_id, id_to_char = sequence.get_vocab()
@@ -30,7 +30,7 @@ answer_size = 29
 answer_none = "_O".ljust(answer_size)
 window_size = 5
 
-default_name_entities = gen_default_name_entities()
+default_name_entities = load_recommend_dictionary()
 
 # Read all articles
 print("Read all articles...", end=' ')
@@ -70,7 +70,7 @@ def convert_to_word_id(sentences):
 
 
 def gen_sentences(article):
-    words = segment_data([article], name_entities = gen_default_name_entities())
+    words = segment_data([article])
     cnt = window_size - len(words) % window_size
     if cnt == window_size:
         cnt = 0

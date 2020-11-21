@@ -67,7 +67,7 @@ def parse_nes(ckip_entity_words):
 
 # Segment articles
 print("Segment articles...")
-load_nes = util.load_name_entities("../dataset/named_entities.txt")
+load_nes = util.load_dictionary("../dataset/named_entities.txt")
 coerce_words = dict([(k, 1) for k in load_nes])
 ws = WS("../ckipdata") # , disable_cuda=not GPU)
 print("  CKIP Pos articles...")

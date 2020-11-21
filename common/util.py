@@ -42,7 +42,14 @@ def gen_word_to_weight(addition_dic={}):
     return word_to_weight
 
 
+global _time_entities
+_time_entities = None
+
 def get_time_entities():
+    global _time_entities
+    if _time_entities:
+        return _time_entities
+
     time_entities = []
     mon1 = [i for i in range(1,13)]
     mon2 = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"]
@@ -102,10 +109,11 @@ def get_time_entities():
     time_entities.append("前天")
     time_entities.append("大前天")
 
-    return time_entities
+    _time_entities = time_entities
+    return _time_entities
 
 
-def load_name_entities(file_path):
+def load_dictionary(file_path):
     with open(file_path, 'r', encoding='utf8') as fp:
         lines = fp.readlines()
 
