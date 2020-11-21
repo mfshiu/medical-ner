@@ -119,7 +119,7 @@ for article_id, article in enumerate(articles):
                     article_id, start_position + offset, start_position + offset + len(w), w, type_name)
                 rows.append(row)
                 print("\r[%d] %s" % (i, row), end="")
-            offset += w
+            offset += len(w)
 
         start_position += len(sentence) # + 1
 
