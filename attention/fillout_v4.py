@@ -21,9 +21,9 @@ batch_size = 128 * 2
 model = AttentionSeq2seq(vocab_size, wordvec_size, hidden_size)
 model.load_params("medical_v4-20.pkl")
 
-test_file = "../dataset/validation.txt"
-# test_file = "../dataset/development_2.txt"
-fillout_file = "../dataset/aicup-output-v3-40.tsv"
+# test_file = "../dataset/validation.txt"
+test_file = "../dataset/development_2.txt"
+fillout_file = "../dataset/aicup-output-v4-20.tsv"
 
 question_size = 29
 answer_size = 3
@@ -118,7 +118,7 @@ for article_id, article in enumerate(articles):
                 row = "{}\t{}\t{}\t{}\t{}\n".format(
                     article_id, start_position + offset, start_position + offset + len(w), w, type_name)
                 rows.append(row)
-                print("\r[%d] %s" % (i, row), end="")
+                print("\r[%d] %s%s" % (i, row, " "*50), end="")
             offset += len(w)
 
         start_position += len(sentence) # + 1
