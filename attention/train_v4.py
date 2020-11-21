@@ -21,7 +21,7 @@ x_train, x_test = x_train[:, ::-1], x_test[:, ::-1]
 vocab_size = len(char_to_id)
 wordvec_size = int(16/1)
 hidden_size = int(256*2)
-batch_size = int(128*2)
+batch_size = int(128*4)
 max_epoch = 20 # max(10, int(len(x_train) / 3000))
 max_grad = 5.0
 
